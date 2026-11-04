@@ -1,0 +1,910 @@
+/*
+ * ONE DOLLAR DEV — CORE STYLES
+ * Version: 1.0.1
+ *
+ * TABLE OF CONTENTS
+ * 01. Document Defaults
+ * 02. Preview Layout — oddScope, oddDemo, oddPanel
+ * 03. Layout Helpers — oddRow, oddStack
+ * 04. Buttons
+ * 05. Form Controls
+ * 06. Navigation
+ * 07. Cards
+ * 08. Feedback — Tooltips, Loaders, Alerts
+ * 09. Overlays — Dialogs, Menus
+ * 10. Backgrounds & Effects
+ * 11. Accessibility
+ * 12. Existing Storefront Styles
+ *
+ * Load this file before component-specific styles.
+ * Values are hard-coded; no CSS custom properties are used.
+ * Keep preview bodies transparent so the parent stage remains visible.
+ */
+
+/* ==========================================================
+   01. DOCUMENT DEFAULTS
+   Minimal document reset; shared appearance lives in oddScope.
+   ========================================================== */
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*::before {
+    box-sizing: inherit;
+}
+
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================
+   02. PREVIEW LAYOUT
+   oddScope: shared defaults, usually applied to the body.
+   oddDemo: centered preview layout with room for small screens.
+   oddPanel: optional white surface around a component.
+   ========================================================== */
+
+.oddScope {
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #111122;
+    background-color: transparent;
+}
+
+.oddDemo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.oddPanel {
+    min-width: 0;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e5ec;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgb(52 54 78 / 10%);
+}
+
+/* ==========================================================
+   03. LAYOUT HELPERS
+   ========================================================== */
+
+.oddRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.oddStack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+}
+
+/* ==========================================================
+   04. BUTTONS
+   Base: oddButton
+   Variants: oddPrimary, oddSecondary
+   States: hover, active, focus-visible, disabled
+   ========================================================== */
+
+.oddButton {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    padding: 0.45rem 1rem;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.015rem;
+    text-align: center;
+    text-decoration: none;
+    color: #444444;
+    background-color: #ffffff;
+    border: 1px solid #e5e5ec;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Primary button */
+
+.oddButton.oddPrimary {
+    color: #ffffff;
+    background-color: #086eea;
+    border-color: #006bd6;
+    text-shadow: 0 1px 1px hsla(200, 10%, 4%, 0.3);
+    box-shadow: hsla(210, 100%, 60%, 0.5) 0 1px 0 inset,
+                hsla(210, 100%, 30%, 0.4) 0 -1px 0 1px inset,
+                hsla(200, 10%, 4%, 0.1) 0 2px 4px 0;
+}
+
+.oddButton.oddPrimary:hover:not(:disabled) {
+    background-color: #0a73f3;
+    border-color: #076be5;
+}
+
+.oddButton.oddPrimary:active:not(:disabled) {
+    background-color: #0061d1;
+    border-color: #0059bf;
+}
+
+.oddButton.oddPrimary svg {
+    fill: #ffffff;
+}
+
+.oddButton.oddPrimary svg path {
+    filter: drop-shadow(0 1px 1px rgb(0 0 0 / 25%));
+}
+
+/* Secondary button */
+
+.oddButton.oddSecondary {
+    color: #444444;
+    background-color: #ffffff;
+    border-color: #e5e5ec;
+    box-shadow: 0 0 0 1px #0a428718;
+}
+
+.oddButton.oddSecondary:hover:not(:disabled) {
+    color: #222222;
+    border-color: #b9b8bd;
+}
+
+.oddButton.oddSecondary:active:not(:disabled) {
+    background-color: #f4f5fb;
+    border-color: #a4a3aa;
+}
+
+.oddButton.oddSecondary i svg {
+    fill: #086eea;
+}
+
+/* Keyboard focus */
+
+.oddButton:focus-visible {
+    outline: 2px solid #086eea;
+    outline-offset: 3px;
+}
+
+/* Disabled buttons — placed after variants to override them. */
+
+.oddButton:disabled {
+    color: #777777;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    text-shadow: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* Button icons */
+
+.oddIcon {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+}
+
+.oddButton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button previews and icon-only controls */
+.oddButtons { min-width: 0; max-width: 100%; font-size: 0.875rem; }
+.oddButtons > .oddRow { justify-content: center; }
+.oddButtons [hidden] { display: none !important; }
+.oddButtons :focus-visible { outline: 2px solid #086eea; outline-offset: 3px; }
+.oddButtons input[type="checkbox"] { accent-color: #086eea; }
+.oddButton.oddButtonIcon { width: 2.5rem; min-height: 2.5rem; padding: 0.5rem; }
+.oddButtons .oddButton.oddSecondary:not(:disabled) .oddIcon { color: #086eea; }
+.oddButtons .oddButton .oddIcon { fill: none; }
+.oddButtons .oddButton:disabled { color: #777777; background-color: #f9f9f9; border-color: #cccccc; text-shadow: none; box-shadow: none; }
+
+/* Toggle buttons and grouped choices */
+.oddButtons .oddButton[aria-pressed="true"] { color: #086eea; background-color: #eef5ff; border-color: #086eea; box-shadow: inset 0 -2px #086eea; }
+.oddButtons .oddButton[aria-pressed="true"]:hover { background-color: #e3efff; }
+.oddButtons .oddButton[aria-pressed="true"] .oddIconFill { fill: #086eea; }
+.oddButtonGroup { display: inline-flex; max-width: 100%; }
+.oddButtonGroup .oddButton { border-radius: 0; margin-left: -1px; }
+.oddButtonGroup .oddButton:first-child { margin-left: 0; border-radius: 3px 0 0 3px; }
+.oddButtonGroup .oddButton:last-child { border-radius: 0 3px 3px 0; }
+.oddButtonGroup .oddButton[aria-pressed="true"] { z-index: 1; }
+.oddButtonGroup .oddButton:focus-visible { z-index: 2; }
+
+/* Independent Save and Favorite toggle states */
+.oddButtons.oddToggle .oddButton.oddSecondary .oddIcon { color: #646473; fill: none; }
+.oddButtons.oddToggle .oddButton[aria-pressed="true"][data-odd-value="save"] .oddIcon { color: #086eea; fill: #086eea; }
+.oddButtons.oddToggle .oddButton[aria-pressed="true"][data-odd-value="favorite"] .oddIcon { color: #dc2626; fill: #dc2626; }
+
+/* Keyboard action toolbar */
+.oddToolbar { display: inline-flex; flex-wrap: nowrap; align-self: center; gap: 0.375rem; padding: 0.375rem; background-color: #ffffff; border: 1px solid #e5e5ec; border-radius: 4px; box-shadow: 0 2px 6px rgb(52 54 78 / 6%); }
+.oddToolbar .oddButton { box-shadow: none; }
+
+/* Split action button and its menu */
+.oddSplit { position: relative; }
+.oddSplitControl { position: relative; align-self: center; }
+.oddSplitGroup { display: inline-flex; align-self: center; }
+.oddSplitGroup > .oddButton:first-child { border-radius: 3px 0 0 3px; }
+.oddSplitGroup > .oddButton:last-child { width: auto; min-height: 0; border-radius: 0 3px 3px 0; border-left-color: rgb(255 255 255 / 35%); }
+.oddSplitGroup > .oddButton:focus-visible { z-index: 1; }
+.oddSplitMenu { position: absolute; top: calc(100% + 0.5rem); left: 0; z-index: 10; display: flex; flex-direction: column; gap: 0.125rem; width: 11rem; max-width: calc(100vw - 2rem); padding: 0.375rem; background-color: #ffffff; border: 1px solid #e5e5ec; border-radius: 4px; box-shadow: 0 8px 24px rgb(52 54 78 / 12%); }
+.oddSplitMenu { overflow-y: auto; overscroll-behavior: contain; }
+.oddSplitMenu.oddSplitMenuAbove { top: auto; bottom: calc(100% + 0.5rem); }
+.oddSplitMenu .oddButton { width: 100%; justify-content: flex-start; border-color: transparent; box-shadow: none; }
+.oddSplitMenu .oddButton:focus { background-color: #eef5ff; }
+
+/* Floating actions: optional preview frame plus reusable button and panel */
+.oddFabPreview { width: 22rem; }
+.oddFabStage { position: relative; width: 20rem; max-width: 100%; min-height: 12rem; }
+.oddFabLines { width: 60%; padding-top: 1.25rem; }
+.oddFabLine { height: 0.375rem; margin: 0.75rem 0; background-color: #e5e5ec; border-radius: 2px; }
+.oddFabLine:last-child { width: 70%; }
+.oddFabStack { position: absolute; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem; max-width: 100%; }
+.oddButton.oddFab { width: 3.5rem; min-height: 3.5rem; padding: 1rem; font-weight: 600; color: #086eea; background-color: #ffffff; border-radius: 50%; box-shadow: 0 4px 12px rgb(52 54 78 / 12%); }
+.oddButton.oddFab:hover { box-shadow: 0 6px 18px rgb(52 54 78 / 18%); }
+.oddButton.oddFab:active { box-shadow: 0 1px 3px rgb(52 54 78 / 12%); }
+.oddButton.oddFabExtended { width: auto; padding-inline: 1.25rem; border-radius: 4px; }
+.oddButton.oddFab.oddPrimary { color: #ffffff; background-color: #086eea; }
+.oddFabPlus { transition: transform 180ms ease; }
+.oddFab[aria-expanded="true"] .oddFabPlus { transform: rotate(45deg); }
+.oddFabPanel { display: flex; flex-direction: column; gap: 0.5rem; max-width: 100%; padding: 0.5rem; background-color: #ffffff; border: 1px solid #e5e5ec; border-radius: 4px; box-shadow: 0 4px 12px rgb(52 54 78 / 10%); }
+
+/* Loading, completion, and error button states */
+.oddButtonSpinner { display: inline-block; flex: 0 0 auto; width: 1rem; height: 1rem; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: oddButtonSpin 800ms linear infinite; }
+@keyframes oddButtonSpin { to { transform: rotate(360deg); } }
+.oddButtons .oddButton[aria-busy="true"] { cursor: progress; }
+.oddButtons[data-odd-state="success"] [data-odd-action="run"] { background-color: #166534; border-color: #14532d; }
+.oddButtons[data-odd-state="error"] [data-odd-action="run"] { background-color: #b91c1c; border-color: #991b1b; }
+@media (prefers-reduced-motion: reduce) {
+    .oddButtonSpinner { animation: none; }
+    .oddFabPlus { transition: none; }
+}
+@media (forced-colors: active) {
+    .oddButtons .oddButton[aria-pressed="true"] { outline: 2px solid Highlight; outline-offset: -4px; }
+}
+
+/* 05. FORM CONTROLS
+   Shared ODD form styles. Every preview uses oddScope + oddDemo.
+   Component behavior remains local; all appearance lives here.
+*/
+
+/* Form layout and labels */
+.oddForm { width: 100%; max-width: 24rem; min-width: 0; font-size: 0.875rem; line-height: 1.5; }
+.oddForm fieldset { width: 100%; min-width: 0; margin: 0; padding: 0; border: 0; }
+.oddForm legend { margin-bottom: 0.75rem; padding: 0; font-weight: 600; }
+.oddForm input { font: inherit; }
+.oddForm select { font: inherit; }
+.oddForm textarea { font: inherit; }
+.oddForm input[type="checkbox"] { accent-color: #086eea; }
+.oddForm input[type="radio"] { accent-color: #086eea; }
+.oddForm input[type="range"] { width: 100%; min-width: 0; height: 2rem; margin: 0; accent-color: #086eea; }
+.oddForm output { font-size: 0.8125rem; color: #646473; }
+.oddForm [hidden] { display: none !important; }
+.oddForm :focus-visible { outline: 2px solid #086eea; outline-offset: 3px; }
+.oddForm .oddButton { align-self: flex-start; }
+.oddField { display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
+.oddLabel { display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; font-weight: 500; }
+.oddMuted { font-size: 0.8125rem; font-weight: 400; line-height: 1.5; color: #646473; }
+.oddSupport { margin: 0; font-size: 0.8125rem; line-height: 1.5; color: #646473; overflow-wrap: anywhere; }
+.oddSupport:empty { display: none; }
+.oddStatus { margin: 0; min-height: 1.5em; font-size: 0.8125rem; color: #646473; overflow-wrap: anywhere; }
+.oddStatus:empty { display: none; }
+.oddChoices { gap: 0; }
+
+/* Text inputs */
+.oddInput { display: block; width: 100%; min-width: 0; min-height: 2.75rem; padding: 0.625rem 0.75rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; color: #111122; font: inherit; font-weight: 400; box-shadow: 0 1px 2px rgb(52 54 78 / 3%); }
+.oddInput:hover:not(:disabled) { border-color: #b9b8bd; }
+.oddInput:focus { border-color: #086eea; }
+.oddInput:disabled { color: #777e8b; background: #f9f9fb; cursor: not-allowed; }
+.oddInput[aria-invalid="true"] { border-color: #b91c1c; }
+.oddForm [data-odd-part="error"] { font-size: 0.8125rem; font-weight: 400; color: #b91c1c; }
+
+/* Textareas and character counters */
+.oddTextarea { display: block; width: 100%; min-width: 0; min-height: 6rem; padding: 0.625rem 0.75rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; color: #111122; font: inherit; font-weight: 400; resize: vertical; box-shadow: 0 1px 2px rgb(52 54 78 / 3%); }
+.oddTextarea:hover:not(:disabled) { border-color: #b9b8bd; }
+.oddTextarea:focus { border-color: #086eea; }
+.oddTextarea:disabled { color: #777e8b; background: #f9f9fb; cursor: not-allowed; }
+.oddForm textarea.oddInput { min-height: 6rem; resize: vertical; }
+.oddForm [data-odd-part="counter"] { align-self: flex-end; font-weight: 400; font-variant-numeric: tabular-nums; }
+
+/* Native selects */
+.oddSelect { display: block; width: 100%; min-width: 0; min-height: 2.75rem; padding: 0.625rem 0.75rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; color: #111122; font: inherit; font-weight: 400; cursor: pointer; box-shadow: 0 1px 2px rgb(52 54 78 / 3%); }
+.oddSelect:hover:not(:disabled) { border-color: #b9b8bd; }
+.oddSelect:focus { border-color: #086eea; }
+.oddSelect:disabled { color: #777e8b; background: #f9f9fb; cursor: not-allowed; }
+
+/* Checkboxes and select-all groups */
+.oddChoice { display: flex; align-items: center; gap: 0.75rem; min-height: 2.75rem; cursor: pointer; }
+.oddChoice:has(input:disabled) { color: #9296a2; cursor: not-allowed; }
+.oddChoice input[type="checkbox"] { flex: 0 0 auto; width: 1.125rem; height: 1.125rem; margin: 0; }
+.oddCheckbox { flex: 0 0 auto; width: 1.125rem; height: 1.125rem; margin: 0; accent-color: #086eea; }
+
+/* Radio groups */
+.oddRadioGroup { border: 0; margin: 0; padding: 0; }
+.oddRadio { flex: 0 0 auto; width: 1.125rem; height: 1.125rem; margin: 0; accent-color: #086eea; }
+.oddChoice input[type="radio"] { flex: 0 0 auto; width: 1.125rem; height: 1.125rem; margin: 0; }
+
+/* Toggle switches */
+.oddSwitch { display: flex; align-items: center; gap: 0.75rem; min-height: 2.75rem; cursor: pointer; }
+.oddSwitchInput { appearance: none; flex: 0 0 auto; width: 2.5rem; height: 1.375rem; margin: 0; padding: 2px; border: 1px solid #b9b8bd; border-radius: 999px; background: #b9b8bd; cursor: pointer; }
+.oddSwitchInput::before { content: ""; display: block; width: 1rem; height: 1rem; border-radius: 50%; background: #ffffff; transition: transform 180ms ease; }
+.oddSwitchInput:checked { background: #086eea; border-color: #086eea; }
+.oddSwitchInput:checked::before { transform: translateX(1.125rem); }
+.oddSwitchInput:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* Compact switches with inline On/Off state */
+.oddCompactSwitch { position: relative; display: flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; cursor: pointer; }
+.oddCompactSwitch > span:first-child { flex: 1; }
+.oddCompactSwitch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.oddCompactSwitchTrack { position: relative; width: 30px; height: 18px; flex: 0 0 auto; background: #b9b8bd; border-radius: 20px; }
+.oddCompactSwitchTrack::after { content: ""; position: absolute; width: 12px; height: 12px; top: 3px; left: 3px; border-radius: 50%; background: #ffffff; transition: transform 150ms ease; }
+.oddCompactSwitch input:checked ~ .oddCompactSwitchTrack { background: #086eea; }
+.oddCompactSwitch input:checked ~ .oddCompactSwitchTrack::after { transform: translateX(12px); }
+.oddCompactSwitch input:focus-visible ~ .oddCompactSwitchTrack { outline: 2px solid #086eea; outline-offset: 3px; }
+.oddCompactSwitchOn { display: none; width: 1.5rem; font-size: 0.75rem; color: #086eea; }
+.oddCompactSwitchOff { width: 1.5rem; font-size: 0.75rem; color: #646473; }
+.oddCompactSwitch input:checked ~ .oddCompactSwitchOn { display: inline; }
+.oddCompactSwitch input:checked ~ .oddCompactSwitchOff { display: none; }
+.oddCompactSwitch:has(input:disabled) { opacity: 0.45; cursor: not-allowed; }
+
+/* Sliders and dual ranges */
+.oddSlider { width: 100%; min-height: 2rem; margin: 0; accent-color: #086eea; }
+.oddRangeTrack { height: 5px; border-radius: 4px; background: #e5e5ec; }
+.oddRangeTrack span { display: block; height: 5px; border-radius: 4px; background: #086eea; }
+.oddForm[data-odd-component="dual-range-slider"] .oddRow { flex-wrap: nowrap; }
+.oddForm[data-odd-component="dual-range-slider"] .oddRow > label { flex: 1; width: 50%; }
+
+/* Native file inputs */
+.oddFileInput { width: 100%; max-width: 100%; min-height: 2.75rem; font: inherit; font-size: 0.8125rem; color: #646473; }
+.oddFileInput::file-selector-button { min-height: 2.75rem; padding: 0.5rem 0.75rem; margin-right: 0.75rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; color: #111122; font: inherit; cursor: pointer; }
+.oddFileInput::file-selector-button:hover { border-color: #086eea; color: #086eea; }
+
+/* File drop zones */
+.oddDrop { padding: 1rem; border: 1px dashed #b9b8bd; border-radius: 4px; background: #ffffff; cursor: pointer; }
+.oddDrop:hover { border-color: #086eea; }
+.oddDrop[data-odd-drag="true"] { outline: 2px solid #086eea; background: #eef5ff; }
+.oddDrop input { max-width: 100%; font-size: 0.75rem; font-weight: 400; }
+.oddDrop input::file-selector-button { min-height: 2.5rem; padding: 0.5rem 0.75rem; margin: 0.5rem 0.5rem 0 0; border: 1px solid #e5e5ec; border-radius: 4px; background: #f7f8fc; color: #111122; font: inherit; cursor: pointer; }
+
+/* Prefix and suffix text inputs */
+.oddAdorn { display: flex; align-items: center; gap: 0.5rem; min-width: 0; padding: 0 0.75rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; }
+.oddAdorn input { flex: 1; width: 100%; min-width: 0; min-height: 2.75rem; border: 0; outline: none; background: transparent; color: #111122; font-weight: 400; }
+.oddAdorn input:focus-visible { outline: none; }
+.oddAdorn:focus-within { outline: 2px solid #086eea; outline-offset: 2px; }
+.oddAdorn:has(input:disabled) { opacity: 0.45; }
+.oddAdorn:has(input[aria-invalid="true"]) { border-color: #b91c1c; }
+.oddAdorn > span { font-size: 0.75rem; font-weight: 400; color: #646473; }
+
+/* Searchable selects and option panels */
+.oddPop { max-height: 12.5rem; overflow: auto; padding: 0.5rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; box-shadow: 0 4px 12px rgb(52 54 78 / 7%); }
+.oddOption { padding: 0.5rem 0.625rem; border-radius: 3px; cursor: pointer; }
+.oddOption:hover:not([aria-disabled="true"]) { color: #086eea; background: #eef5ff; }
+.oddOption[data-odd-active="true"] { color: #086eea; background: #eef5ff; }
+.oddOption[aria-selected="true"] { color: #086eea; font-weight: 600; }
+.oddOption[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; }
+.oddPop p { margin: 0.5rem; color: #646473; }
+
+/* Filter chips and multi-select choices */
+.oddChipList { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.oddChipList li { display: flex; align-items: center; padding-inline-start: 0.625rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; }
+.oddChipList .oddButton { width: 2rem; min-height: 2rem; padding: 0; border: 0; box-shadow: none; background: transparent; }
+.oddChipList .oddButton:hover { color: #086eea; background: #eef5ff; }
+.oddSelectedChip { display: flex; align-items: center; gap: 0.375rem; padding-inline-start: 0.625rem; border: 1px solid #c4dafa; border-radius: 4px; background: #eef5ff; color: #086eea; }
+.oddSelectedChip .oddButton { min-height: 2rem; padding: 0.25rem 0.5rem; border: 0; box-shadow: none; color: #086eea; background: transparent; }
+
+/* Radio choice cards */
+.oddRadioCard { display: flex; align-items: center; gap: 0.75rem; min-height: 2.75rem; padding: 0.875rem 1rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; cursor: pointer; }
+.oddRadioCard input { flex: 0 0 auto; margin: 0; }
+.oddRadioCard span span { display: block; }
+.oddRadioCard:has(input:checked) { border-color: #086eea; background: #f5f9ff; }
+.oddRadioCard:has(input:disabled) { opacity: 0.45; cursor: not-allowed; }
+.oddRadioCard:has(input:focus-visible) { outline: 2px solid #086eea; outline-offset: 2px; }
+
+/* Segmented radio controls */
+.oddSegments { display: flex; padding: 3px; border: 1px solid #e5e5ec; border-radius: 4px; background: #f7f8fc; }
+.oddSegments label { position: relative; flex: 1; min-width: 0; text-align: center; cursor: pointer; }
+.oddSegments input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.oddSegments span { display: block; min-height: 2.5rem; padding: 0.625rem 0.5rem; border: 1px solid transparent; border-radius: 3px; font-size: 0.8125rem; overflow-wrap: anywhere; }
+.oddSegments input:checked + span { border-color: #086eea; background: #086eea; color: #ffffff; font-weight: 500; }
+.oddSegments input:focus-visible + span { outline: 2px solid #086eea; outline-offset: 2px; }
+.oddSegments input:disabled + span { opacity: 0.45; cursor: not-allowed; }
+
+/* Color swatches */
+.oddSwatch { position: relative; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid #b9b8bd; border-radius: 4px; cursor: pointer; }
+.oddSwatchBlue { background: #086eea; }
+.oddSwatchCharcoal { background: #333333; }
+.oddSwatchSilver { background: #999999; }
+.oddSwatchWhite { background: #ffffff; }
+.oddSwatch input { appearance: none; position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; border-radius: 4px; cursor: pointer; }
+.oddSwatch:has(input:checked)::after { content: "✓"; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: #111122; color: #ffffff; text-align: center; font-size: 0.8125rem; line-height: 1.25rem; pointer-events: none; }
+
+/* Half-star rating */
+.oddStars { display: flex; gap: 0.375rem; }
+.oddStar { position: relative; display: block; width: 2rem; height: 2rem; flex: 0 0 auto; }
+.oddStar > svg { width: 2rem; height: 2rem; fill: #e5e5ec; }
+.oddStar > span { position: absolute; inset: 0; overflow: hidden; }
+.oddStar > span svg { width: 2rem; height: 2rem; max-width: none; fill: #086eea; }
+
+/* Calendar date picker */
+.oddCalendar { width: 100%; padding: 1rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; font-size: 0.8125rem; box-shadow: 0 2px 8px rgb(52 54 78 / 6%); }
+.oddCalendarHeader { justify-content: space-between; flex-wrap: nowrap; }
+.oddCalendarHeader .oddButton { width: 2.25rem; height: 2.25rem; padding: 0; font-size: 1.25rem; }
+.oddCalendar table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.oddCalendar th { padding: 0.375rem 0; font-weight: 500; color: #646473; }
+.oddCalendar td { padding: 1px; text-align: center; }
+.oddDay { width: 100%; min-height: 2rem; padding: 0.25rem 0; border: 0; border-radius: 3px; background: transparent; color: #111122; font: inherit; cursor: pointer; }
+.oddDay:hover:not(:disabled) { color: #086eea; background: #eef5ff; }
+.oddCalendar [aria-selected="true"] button { background: #086eea; color: #ffffff; }
+.oddDay:disabled { opacity: 0.3; cursor: not-allowed; }
+.oddDay[aria-current="date"] { box-shadow: inset 0 0 0 1px #086eea; }
+
+/* Form motion and high-contrast adaptations */
+@media (prefers-reduced-motion: reduce) {
+    .oddSwitchInput::before { transition: none; }
+    .oddCompactSwitchTrack::after { transition: none; }
+}
+@media (forced-colors: active) {
+    .oddSwitchInput { appearance: auto; }
+    .oddSwitchInput::before { display: none; }
+    .oddCompactSwitchTrack { border: 1px solid ButtonText; }
+    .oddCompactSwitch input:checked ~ .oddCompactSwitchTrack { background: Highlight; }
+    .oddCompactSwitchTrack::after { background: ButtonText; }
+    .oddSegments input:checked + span { outline: 2px solid Highlight; }
+    .oddSwatch:has(input:checked)::after { border: 1px solid Highlight; }
+}
+
+/* ==========================================================
+   06. NAVIGATION
+   Add shared navigation styles here as components are migrated.
+   ========================================================== */
+
+/* ==========================================================
+   07. CARDS
+   Basic card: oddCard, oddCardHeader, oddCardBody, oddCardFooter.
+   Storefront product-card rules are retained in section 12.
+   ========================================================== */
+
+/* Basic card — header, content, and optional actions */
+.oddCard {
+    width: 20rem;
+    min-width: 0;
+    max-width: 100%;
+    color: #111122;
+    background-color: #ffffff;
+    border: 1px solid #e5e5ec;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgb(52 54 78 / 10%);
+    overflow-wrap: anywhere;
+}
+
+.oddCardHeader {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e5e5ec;
+}
+
+.oddCardTitle {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.oddCardBody {
+    padding: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #646473;
+}
+
+.oddCardBody p {
+    margin: 0 0 0.75rem;
+}
+
+.oddCardBody p:last-child {
+    margin-bottom: 0;
+}
+
+.oddCardFooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    border-top: 1px solid #e5e5ec;
+}
+
+/* Avatar, profile, image, and media previews */
+.oddCardDemo { width: 20rem; min-width: 0; max-width: 100%; font-size: 0.875rem; }
+.oddCardDemo [hidden] { display: none !important; }
+.oddCardDemo :focus-visible { outline: 2px solid #086eea; outline-offset: 3px; }
+
+/* Avatars and initials fallback */
+.oddAvatar { display: inline-grid; place-items: center; flex: 0 0 auto; width: 3rem; height: 3rem; overflow: hidden; border: 2px solid #ffffff; border-radius: 50%; background-color: #eef5ff; color: #086eea; font-size: 0.875rem; font-weight: 600; line-height: 1; }
+.oddAvatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.oddAvatarSquare { border-radius: 4px; }
+.oddAvatarSmall { width: 2.25rem; height: 2.25rem; font-size: 0.75rem; }
+.oddAvatarDemo > .oddRow { justify-content: center; }
+
+/* Avatar group and additional members */
+.oddAvatarGroupRow { justify-content: center; gap: 0.5rem; }
+.oddAvatarGroup { display: flex; list-style: none; margin: 0; padding: 0; padding-inline-start: 0.5rem; }
+.oddAvatarGroup li { position: relative; margin-inline-start: -0.5rem; }
+.oddAvatarGroup li:hover { z-index: 1; }
+.oddButton.oddAvatarOverflowButton { flex: 0 0 auto; width: 3rem; min-height: 3rem; padding: 0.5rem; border-radius: 50%; }
+.oddAvatarOverflow { max-height: 12.5rem; overflow-y: auto; padding: 0.875rem; background-color: #ffffff; border: 1px solid #e5e5ec; border-radius: 4px; box-shadow: 0 4px 12px rgb(52 54 78 / 8%); }
+.oddAvatarOverflow p { margin: 0 0 0.5rem; }
+.oddAvatarOverflow p:last-child { margin-bottom: 0; }
+
+/* Profile identity rows */
+.oddProfileRow { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.oddProfileText { display: flex; flex-direction: column; gap: 0; min-width: 0; }
+.oddProfileRow > div { min-width: 0; overflow-wrap: anywhere; }
+.oddProfileRow strong { display: block; color: #111122; font-weight: 600; }
+.oddProfileRow p { margin: 0; }
+
+/* Responsive images and their unavailable state */
+.oddImage { margin: 0; }
+.oddImage img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background-color: #e5e5ec; }
+.oddImageFallback { display: grid; place-items: center; width: 100%; aspect-ratio: 4 / 3; padding: 1rem; border: 1px solid #e5e5ec; border-radius: 4px; background-color: #f4f5fb; color: #646473; }
+.oddImage figcaption { margin-top: 0.5rem; }
+
+/* Native media — keep the browser's playback controls */
+.oddMedia audio { display: block; width: 100%; max-width: 100%; }
+.oddMedia strong { font-weight: 600; }
+.oddMedia .oddMuted { margin: 0; }
+
+/* ==========================================================
+   08. FEEDBACK — TOOLTIPS, LOADERS, ALERTS
+   Add shared feedback styles here as components are migrated.
+   ========================================================== */
+   /* Tooltip */
+
+.oddTooltip {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: 100%;
+}
+
+/* Keeps hover active between the button and bubble. */
+.oddTooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 0.75rem;
+}
+
+.oddTooltip .oddTooltipBubble {
+    position: absolute;
+    bottom: calc(100% + 0.75rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: max-content;
+    max-width: min(18rem, calc(100vw - 2rem));
+    padding: 0.5rem 0.75rem;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    color: #ffffff;
+    background-color: #086eea;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgb(8 110 234 / 18%);
+}
+
+/* Triangle pointing down toward the icon. */
+.oddTooltipBubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #086eea;
+}
+
+.oddTooltip .oddTooltipBubble[hidden] {
+    display: none;
+}
+
+/* Square icon button */
+.oddTooltip .oddButtonIcon {
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+}
+
+/* ODD Blue information icon */
+.oddTooltip .oddButton .oddIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #086eea;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+}
+
+/* Alert — dismissible status message; provides its own white surface. */
+
+.oddAlertDemo {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.oddAlert {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
+    padding: 0.875rem 1rem;
+    color: #111122;
+    background-color: #ffffff;
+    border: 1px solid #e5e5ec;
+    border-inline-start: 3px solid #086eea;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgb(52 54 78 / 6%);
+}
+
+.oddAlert > .oddIcon {
+    color: #086eea;
+}
+
+.oddAlertText {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.oddAlert .oddAlertDismiss {
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+    margin: -0.25rem -0.375rem -0.25rem 0;
+    padding: 0.375rem;
+    color: #777e8b;
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+.oddAlert .oddAlertDismiss:hover {
+    color: #086eea;
+    background-color: #eef5ff;
+}
+
+.oddAlert .oddAlertDismiss:active {
+    background-color: #e1edff;
+}
+
+.oddAlertRestore {
+    align-self: center;
+}
+
+/* Explicitly preserve hidden behavior when the alert uses display:flex. */
+.oddAlertDemo [hidden] {
+    display: none;
+}
+
+/* Feedback preview layout */
+.oddFeedback { width: 100%; max-width: 24rem; min-width: 0; font-size: 0.875rem; line-height: 1.5; }
+.oddFeedback [hidden] { display: none !important; }
+.oddFeedbackRow { justify-content: center; }
+
+/* Status badges */
+.oddBadge { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.5rem; border: 1px solid #e5e5ec; border-radius: 3px; background: #ffffff; color: #646473; font-size: 0.75rem; font-weight: 500; line-height: 1.4; white-space: nowrap; }
+.oddBadgeSuccess { border-color: #c8e5d1; background: #f0faf3; color: #166534; }
+.oddBadgeWarning { border-color: #ecdfb4; background: #fffbeb; color: #854d0e; }
+.oddBadgeError { border-color: #f2cccc; background: #fff5f5; color: #b91c1c; }
+.oddBadgeCore { border-color: #c4dafa; background: #eef5ff; color: #086eea; font-weight: 600; }
+
+/* Notification count badges */
+.oddNotificationButton.oddButton { position: relative; overflow: visible; width: 3rem; height: 3rem; padding: 0.75rem; color: #086eea; }
+.oddNotificationButton .oddIcon { fill: none; stroke: currentColor; }
+.oddNotificationCount { position: absolute; top: -0.5rem; right: -0.5rem; display: inline-flex; align-items: center; justify-content: center; min-width: 1.375rem; height: 1.375rem; padding: 0 0.3125rem; border: 2px solid #ffffff; border-radius: 999px; background: #086eea; color: #ffffff; font-size: 0.625rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.oddFeedback[data-odd-component="notification-count-badge"] .oddStatus { text-align: center; }
+
+/* Inline form error summaries */
+.oddErrorSummary { min-width: 0; padding: 0.875rem 1rem; border: 1px solid #f2cccc; border-inline-start: 3px solid #b91c1c; border-radius: 4px; background: #fff8f8; color: #b91c1c; }
+.oddErrorSummary p { margin: 0 0 0.5rem; font-weight: 600; }
+.oddErrorSummary .oddLink { display: block; width: fit-content; color: #b91c1c; font-size: 0.8125rem; text-decoration: underline; text-underline-offset: 3px; }
+.oddErrorSummary .oddLink + .oddLink { margin-top: 0.25rem; }
+.oddFeedback .oddInlineError { color: #b91c1c; }
+.oddFeedback .oddInput[aria-invalid="true"] { border-color: #b91c1c; }
+
+/* Empty states — optional call to action */
+.oddEmpty { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; padding: 1.5rem; border: 1px solid #e5e5ec; border-radius: 4px; background: #ffffff; text-align: center; box-shadow: 0 2px 8px rgb(52 54 78 / 6%); }
+.oddEmptyIcon { display: grid; place-items: center; width: 3rem; height: 3rem; border: 1px solid #d9e7fc; border-radius: 4px; background: #eef5ff; color: #086eea; }
+.oddEmpty h2 { margin: 0; font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
+.oddEmpty p { margin: 0; }
+.oddEmpty .oddButton { align-self: center; }
+.oddEmptyCompact { padding: 1rem; gap: 0.5rem; }
+
+/* Keyboard shortcut hints — visual hints, no global key bindings */
+.oddShortcutDemo { max-width: 17rem; }
+.oddShortcutRow { justify-content: space-between; }
+.oddShortcut { display: inline-flex; align-items: center; gap: 0.25rem; }
+.oddShortcut kbd { display: inline-flex; align-items: center; justify-content: center; min-width: 1.875rem; min-height: 1.875rem; padding: 0.25rem 0.5rem; border: 1px solid #e5e5ec; border-bottom-width: 2px; border-radius: 4px; background: #ffffff; color: #444444; font: 0.75rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; box-shadow: 0 1px 2px rgb(52 54 78 / 4%); }
+.oddShortcutSmall kbd { min-width: 1.5rem; min-height: 1.5rem; padding: 0.125rem 0.375rem; font-size: 0.625rem; }
+
+/* ==========================================================
+   09. OVERLAYS — DIALOGS, MENUS
+   Add shared overlay styles here as components are migrated.
+   ========================================================== */
+
+/* ==========================================================
+   10. BACKGROUNDS & EFFECTS
+   Add shared background/effect styles here as components migrate.
+   Keep reduced-motion alternatives beside each animation.
+   ========================================================== */
+
+/* ==========================================================
+   11. ACCESSIBILITY
+   ========================================================== */
+
+.oddSrOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================================================
+   12. EXISTING STOREFRONT STYLES
+   Preserved from the supplied file to avoid removing site rules.
+   These can move to the storefront stylesheet separately.
+   Existing storefront class names are deliberately retained.
+   ========================================================== */
+
+/* Storefront buttons */
+
+.to-top {
+    transition: all 400ms;
+    overflow: hidden;
+}
+
+.to-top.active {
+    border-color: #086eea;
+}
+
+.odd-product__actions .oddButton {
+    gap: 0.5rem;
+}
+
+.oddButton.download {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button#product-cart-card {
+    display: flex;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .to-top {
+        transition: none;
+    }
+}
+
+/* Storefront product cards */
+
+.cardTitle {
+    font-size: 1.15rem;
+}
+
+.product-card .core-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.28rem 0.55rem;
+    color: #111111;
+    background: rgb(0 0 0 / 5%);
+    font-size: 0.65rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.product-card .core-badge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(255 255 255 / 15%);
+    pointer-events: none;
+}
+
+.product-card .free-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.28rem 0.55rem;
+    color: #111111;
+    background: rgb(0 0 0 / 5%);
+    font-size: 0.65rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.product-card .free-badge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(255 255 255 / 15%);
+    pointer-events: none;
+}
