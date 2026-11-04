@@ -1,0 +1,28 @@
+name: Validate and package Core candidate
+on:
+  push:
+    paths: ['components/**', 'odd-core.css', 'LICENSE', 'scripts/**', '.github/workflows/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate metadata, shared styles and build candidate
+        env:
+          BUILD_REF: ${{ github.sha }}
+        run: python scripts/build_candidate.py --ref "$BUILD_REF"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-button-candidate-${{ github.run_id }}
+          path: build/
+          retention-days: 30
+          if-no-files-found: error
