@@ -1,0 +1,3 @@
+# Contribution and release controls
+
+Use a feature branch and reviewed pull request against main. Preserve source provenance, unknown fields, instructions, versions, and original ZIP checksums. No production credentials or database exports. Reconcile conflicts before changing data. Build artifacts are temporary; preserve original releases in Drive and later copy byte-for-byte to approved durable private storage. Require a reviewed release metadata change before packaging. Separate deployment approval remains mandatory. Configure main branch protection and required checks after the first successful GitHub run.

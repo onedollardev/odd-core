@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.sql
+*.sql.gz
+node_modules/
+__pycache__/
+.venv/
+build/
+dist/
+*.zip
+.DS_Store
