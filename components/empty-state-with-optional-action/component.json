@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 0,
   "source_dir": "_core/feedback/empty-state-with-optional-action/",
   "download": "_core/feedback/empty-state-with-optional-action/releases/empty-state-with-optional-action-1.0.0.zip",

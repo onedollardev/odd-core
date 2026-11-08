@@ -7,7 +7,7 @@
   "participation": "odd-style",
   "core": true,
   "price": 0,
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "files": [
     "index.html",
     "component.json",

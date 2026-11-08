@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 0,
   "source_dir": "_core/layout/prose-typography-block/",
   "download": "_core/layout/prose-typography-block/releases/prose-typography-block-1.0.0.zip",

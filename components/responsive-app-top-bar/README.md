@@ -15,7 +15,7 @@ odd:ready identifies component, version, contractVersion and instanceId. odd:cha
 Inherited --odd-* tokens; #086eea accent; neutral surfaces; 4px corners except functional circular forms. Scoped odd-* classes and data-odd-* hooks. Respect visible focus, names, labels and reduced motion. Preserve semantic heading levels when embedding. Modern Chromium checks are recorded in validation.md; Firefox, Safari and screen-reader integration checks remain. No WCAG certification claim.
 
 ## Files and license
-Customer ZIP includes index.html, style.css, script.js where needed, editable local assets where used, README.md, LICENSE.txt and component.json. preview/index.php embeds all styling, logic and media; exclude it from customer releases. Free use/modification; attribution required on republishing; resale prohibited. All sample SVG/media assets are original.
+Customer ZIP includes index.html, style.css, script.js where needed, editable local assets where used, README.md, LICENSE.txt and component.json. preview/index.php embeds all styling, logic and media; exclude it from customer releases. MIT licensed; see LICENSE.txt. All sample SVG/media assets are original.
 
 ## Production brief
 Build Responsive App Top Bar as standalone ODD Core 1.0.0 using semantic HTML, scoped CSS and vanilla JavaScript; no framework, CDN or build step.
@@ -24,6 +24,6 @@ Build a semantic header with a generic app label/home link, small navigation and
 
 Use odd-* classes, data-odd-* behavior hooks and inherited --odd-* tokens. Keep 90–95% neutral surfaces, 5–10% #086eea emphasis, restrained effects and 4px corners where appropriate. Expose window.ODDCore["responsive-app-top-bar"].init(root); support idempotent initialization, independent instances and destroy() cleanup. Document event payloads and use unique relationship IDs.
 
-Deliver index.html, style.css, script.js, README.md, LICENSE.txt and component.json in _core/navigation/responsive-app-top-bar/releases/responsive-app-top-bar-1.0.0.zip. Create a separate _core/navigation/responsive-app-top-bar/preview/index.php with embedded styling/logic, only essential component labels, and a clean 3-across tile. Verify 240–400px reflow, zoom, keyboard/focus, relevant states, reset, reduced motion and multiple instances. License: free use; attribution when republishing; no resale.
+Deliver index.html, style.css, script.js, README.md, LICENSE.txt and component.json in _core/navigation/responsive-app-top-bar/releases/responsive-app-top-bar-1.0.0.zip. Create a separate _core/navigation/responsive-app-top-bar/preview/index.php with embedded styling/logic, only essential component labels, and a clean 3-across tile. Verify 240–400px reflow, zoom, keyboard/focus, relevant states, reset, reduced motion and multiple instances. MIT licensed; see LICENSE.txt.
 
 Inspiration: https://drive.google.com/file/d/1KqSXMUXv-c99-8LP5Y9KQ2VVnZ9MRzbH/view?usp=drivesdk

@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 1,
   "source_dir": "_core/forms/file-drop-zone-with-selection-preview/",
   "download": "_core/forms/file-drop-zone-with-selection-preview/releases/file-drop-zone-with-selection-preview-1.0.0.zip",

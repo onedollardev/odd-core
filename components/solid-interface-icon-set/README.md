@@ -24,6 +24,6 @@ Create ten original solid SVGs matching the existing plus, upload, settings, boo
 
 Use odd-* classes, data-odd-* behavior hooks and inherited --odd-* tokens. Keep 90–95% neutral surfaces, 5–10% #086eea emphasis, restrained effects and 4px corners where appropriate. Preserve native semantics and events; add no unnecessary script.
 
-Deliver index.html, style.css, assets/*.svg, README.md, LICENSE.txt and component.json in _core/icons/solid-interface-icon-set/releases/solid-interface-icon-set-1.0.0.zip. Create a separate _core/icons/solid-interface-icon-set/preview/index.php with embedded styling/logic, only essential component labels, and a clean 3-across tile. Verify 240–400px reflow, zoom, keyboard/focus, relevant states, reset, reduced motion and multiple instances. The historical brief specified no resale; the development version uses MIT.
+Deliver index.html, style.css, assets/*.svg, README.md, LICENSE.txt and component.json in _core/icons/solid-interface-icon-set/releases/solid-interface-icon-set-1.0.0.zip. Create a separate _core/icons/solid-interface-icon-set/preview/index.php with embedded styling/logic, only essential component labels, and a clean 3-across tile. Verify 240–400px reflow, zoom, keyboard/focus, relevant states, reset, reduced motion and multiple instances.
 
 Inspiration: https://drive.google.com/file/d/1hf9FldTMUJw1TWw2XFlhwKOCJOwUx4RU/view?usp=drivesdk

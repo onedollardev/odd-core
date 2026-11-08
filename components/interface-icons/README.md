@@ -18,4 +18,4 @@ Use native controls and events. When copying radio groups or authored relationsh
 Semantic elements, visible keyboard focus, readable labels and reduced-motion support. Modern browsers using CSS custom properties; browser-native controls may differ visually. Chromium interaction/reflow checks are documented at the Core root. Safari, Firefox and screen-reader acceptance remain integration checks; this is not a WCAG certification. The preview is a separate self-contained index.php for marketplace display and is intentionally excluded from the download.
 
 ## License
-See LICENSE.txt. This development version uses MIT; retain the copyright and permission notices in LICENSE.txt. Assets are original ODD work.
+MIT. See LICENSE.txt; retain the copyright and permission notices. Assets are original ODD work.

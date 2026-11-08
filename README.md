@@ -9,7 +9,7 @@ Free building blocks for One Dollar Dev: one shared stylesheet plus 66 HTML/CSS/
 
 ## Licensing
 
-The repository's `LICENSE` is MIT and covers the shared stylesheet and tooling. Most components currently ship a component-level `LICENSE.txt` (the One Dollar Dev Free Core license: use and modify freely, share with attribution, no standalone resale). Each component's own `LICENSE.txt` applies to that component. The final license for the Core set is still under review.
+Everything in this repository is MIT licensed: the shared stylesheet, tooling and every component. Each component carries a copy of the MIT license in its `LICENSE.txt`. The original 1.0.0 ZIPs in `archive/` are historical copies and keep the licenses they were issued with.
 
 ## Status
 

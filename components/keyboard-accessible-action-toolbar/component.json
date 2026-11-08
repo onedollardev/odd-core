@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 1,
   "source_dir": "_core/buttons/keyboard-accessible-action-toolbar/",
   "download": "_core/buttons/keyboard-accessible-action-toolbar/releases/keyboard-accessible-action-toolbar-1.0.0.zip",

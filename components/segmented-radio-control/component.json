@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 1,
   "source_dir": "_core/forms/segmented-radio-control/",
   "download": "_core/forms/segmented-radio-control/releases/segmented-radio-control-1.0.0.zip",
