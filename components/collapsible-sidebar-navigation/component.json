@@ -1,0 +1,25 @@
+{
+  "sku": "ODD-CORE-000062",
+  "name": "Collapsible Sidebar Navigation",
+  "slug": "collapsible-sidebar-navigation",
+  "category": "navigation",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/navigation/collapsible-sidebar-navigation/",
+  "download": "_core/navigation/collapsible-sidebar-navigation/releases/collapsible-sidebar-navigation-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

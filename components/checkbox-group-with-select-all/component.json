@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000037",
+  "name": "Checkbox Group with Select All",
+  "slug": "checkbox-group-with-select-all",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/checkbox-group-with-select-all/",
+  "download": "_core/forms/checkbox-group-with-select-all/releases/checkbox-group-with-select-all-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

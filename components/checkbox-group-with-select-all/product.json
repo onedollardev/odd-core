@@ -1,0 +1,17 @@
+{
+  "sku": "ODD-CORE-000037",
+  "name": "Checkbox Group with Select All",
+  "slug": "checkbox-group-with-select-all",
+  "category": "forms",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}

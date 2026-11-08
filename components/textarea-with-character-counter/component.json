@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000067",
+  "name": "Textarea with Character Counter",
+  "slug": "textarea-with-character-counter",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/textarea-with-character-counter/",
+  "download": "_core/forms/textarea-with-character-counter/releases/textarea-with-character-counter-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

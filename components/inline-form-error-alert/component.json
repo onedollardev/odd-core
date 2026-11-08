@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000027",
+  "name": "Inline Form Error Alert",
+  "slug": "inline-form-error-alert",
+  "category": "feedback",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/feedback/inline-form-error-alert/",
+  "download": "_core/feedback/inline-form-error-alert/releases/inline-form-error-alert-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000035",
+  "name": "Calendar Date Picker",
+  "slug": "calendar-date-picker",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/calendar-date-picker/",
+  "download": "_core/forms/calendar-date-picker/releases/calendar-date-picker-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

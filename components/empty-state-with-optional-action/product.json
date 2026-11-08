@@ -1,0 +1,16 @@
+{
+  "sku": "ODD-CORE-000050",
+  "name": "Empty State with Optional Action",
+  "slug": "empty-state-with-optional-action",
+  "category": "feedback",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}

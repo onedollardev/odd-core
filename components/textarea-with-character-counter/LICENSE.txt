@@ -1,0 +1,3 @@
+ODD Core Free License 1.0
+Copyright 2026 One Dollar Dev.
+Permission to use and modify for personal and commercial work. Attribution to One Dollar Dev (https://onedollardev.com) is required when sharing or republishing the component or source. Resale of this component or substantially equivalent repackaged source is prohibited. Provided as-is, without warranty. Original included assets use the same terms.

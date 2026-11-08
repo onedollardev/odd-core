@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000040",
+  "name": "Labeled Section Divider",
+  "slug": "labeled-section-divider",
+  "category": "layout",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/layout/labeled-section-divider/",
+  "download": "_core/layout/labeled-section-divider/releases/labeled-section-divider-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

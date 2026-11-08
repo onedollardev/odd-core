@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000031",
+  "name": "Notification Count Badge",
+  "slug": "notification-count-badge",
+  "category": "feedback",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/feedback/notification-count-badge/",
+  "download": "_core/feedback/notification-count-badge/releases/notification-count-badge-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "sku": "ODD-CORE-000065",
+  "name": "Compact Switch with Inline State Label",
+  "slug": "compact-switch-with-inline-state-label",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/compact-switch-with-inline-state-label/",
+  "download": "_core/forms/compact-switch-with-inline-state-label/releases/compact-switch-with-inline-state-label-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css"
+  ]
+}

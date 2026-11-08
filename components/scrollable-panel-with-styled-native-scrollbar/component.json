@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000059",
+  "name": "Scrollable Panel with Styled Native Scrollbar",
+  "slug": "scrollable-panel-with-styled-native-scrollbar",
+  "category": "layout",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/layout/scrollable-panel-with-styled-native-scrollbar/",
+  "download": "_core/layout/scrollable-panel-with-styled-native-scrollbar/releases/scrollable-panel-with-styled-native-scrollbar-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

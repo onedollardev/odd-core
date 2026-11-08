@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000055",
+  "name": "Surface Panel with Elevation",
+  "slug": "surface-panel-with-elevation",
+  "category": "layout",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/layout/surface-panel-with-elevation/",
+  "download": "_core/layout/surface-panel-with-elevation/releases/surface-panel-with-elevation-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

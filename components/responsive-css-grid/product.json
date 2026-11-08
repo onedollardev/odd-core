@@ -1,0 +1,16 @@
+{
+  "sku": "ODD-CORE-000044",
+  "name": "Responsive CSS Grid",
+  "slug": "responsive-css-grid",
+  "category": "layout",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}

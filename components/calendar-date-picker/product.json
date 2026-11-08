@@ -1,0 +1,17 @@
+{
+  "sku": "ODD-CORE-000035",
+  "name": "Calendar Date Picker",
+  "slug": "calendar-date-picker",
+  "category": "forms",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}
