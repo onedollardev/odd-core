@@ -1,0 +1,33 @@
+{
+  "sku": "ODD-CORE-000045",
+  "name": "Solid Interface Icon Set",
+  "slug": "solid-interface-icon-set",
+  "category": "icons",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "MIT",
+  "preview_type": 0,
+  "source_dir": "_core/icons/solid-interface-icon-set/",
+  "download": "_core/icons/solid-interface-icon-set/releases/solid-interface-icon-set-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "assets/bell.svg",
+    "assets/bookmark.svg",
+    "assets/check.svg",
+    "assets/close.svg",
+    "assets/edit.svg",
+    "assets/heart.svg",
+    "assets/info.svg",
+    "assets/plus.svg",
+    "assets/settings.svg",
+    "assets/upload.svg",
+    "component.json",
+    "index.html",
+    "style.css"
+  ]
+}

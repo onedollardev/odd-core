@@ -1,0 +1,20 @@
+(() => {
+ const mounted=new WeakMap();
+ function init(root){
+  if(!root||root.dataset.oddComponent!=="donut-chart-with-accessible-legend")throw new Error('Expected '+"donut-chart-with-accessible-legend"+' root');if(mounted.has(root))return mounted.get(root);
+  const controller=new AbortController(),options={signal:controller.signal},cleanups=[];
+  const instance=globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);
+  const q=s=>root.querySelector(s),qa=s=>[...root.querySelectorAll(s)];
+  const remap=new Map();qa('[id]').forEach((el,i)=>{if(document.querySelectorAll('[id="'+CSS.escape(el.id)+'"]').length>1){const old=el.id;el.id='odd-'+instance+'-authored-'+i;remap.set(old,el.id);}});qa('[aria-controls],[aria-describedby],[aria-labelledby],a[href^="#"]').forEach(el=>{['aria-controls','aria-describedby','aria-labelledby'].forEach(a=>{if(el.hasAttribute(a))el.setAttribute(a,el.getAttribute(a).split(' ').map(v=>remap.get(v)||v).join(' '));});if(el.hasAttribute('href')){const v=el.getAttribute('href').slice(1);if(remap.has(v))el.setAttribute('href','#'+remap.get(v));}});
+  const on=(el,type,fn)=>{if(el)el.addEventListener(type,fn,options);};
+  const id=(el,part='part')=>{if(!el.id||document.querySelectorAll('[id="'+CSS.escape(el.id)+'"]').length>1)el.id='odd-'+"donut-chart-with-accessible-legend"+'-'+instance+'-'+part;return el.id;};
+  const emit=value=>root.dispatchEvent(new CustomEvent('odd:change',{bubbles:true,detail:{component:"donut-chart-with-accessible-legend",version:'1.0.0',contractVersion:'1.0.0',instanceId:instance,value,source:'user'}}));
+  const status=q('[data-odd-part="status"]');const say=t=>{if(status)status.textContent=t;};
+  const act=name=>q('[data-odd-action="'+name+'"]');
+  const form=root.closest('form')||q('form');const reset=fn=>{on(form,'reset',()=>{setTimeout(()=>{if(!controller.signal.aborted)fn();},0);});};
+  const chart=q('[data-odd-part=chart]'),legend=q('[data-odd-part=legend]');let alternate=false;function setData(data){data=data.map((d,i)=>({name:String(d.name||'Item '+(i+1)),value:Math.max(0,Number(d.value)||0)}));const total=data.reduce((s,d)=>s+d.value,0);chart.replaceChildren();legend.replaceChildren();let offset=0;data.forEach((d,i)=>{const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx','50');c.setAttribute('cy','50');c.setAttribute('r','36');c.setAttribute('fill','none');c.setAttribute('stroke',['#333333','#999999','#d1d1d1'][i%3]);c.setAttribute('stroke-width',String(13-i%3*3));c.setAttribute('pathLength','100');const p=total?d.value/total*100:0;c.setAttribute('stroke-dasharray',p+' '+(100-p));c.setAttribute('stroke-dashoffset',String(-offset));c.setAttribute('transform','rotate(-90 50 50)');chart.append(c);offset+=p;const row=document.createElement('tr'),name=document.createElement('th'),val=document.createElement('td');name.scope='row';name.textContent=d.name;val.textContent=String(d.value);row.append(name,val);legend.append(row);});if(!total){const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x','50');t.setAttribute('y','53');t.setAttribute('text-anchor','middle');t.setAttribute('font-size','10');t.textContent='No data';chart.append(t);}emit({data,total});}on(act('dataset'),'click',()=>{alternate=!alternate;setData(alternate?[{name:'Design',value:30},{name:'Build',value:50},{name:'Review',value:20}]:[{name:'Design',value:50},{name:'Build',value:35},{name:'Review',value:15}]);});setData([{name:'Design',value:50},{name:'Build',value:35},{name:'Review',value:15}]);
+  const api={setData, destroy(){controller.abort();cleanups.forEach(fn=>fn());mounted.delete(root);}};mounted.set(root,api);
+  root.dispatchEvent(new CustomEvent('odd:ready',{bubbles:true,detail:{component:"donut-chart-with-accessible-legend",version:'1.0.0',contractVersion:'1.0.0',instanceId:instance}}));return api;
+ }
+ window.ODDCore=window.ODDCore||{};window.ODDCore["donut-chart-with-accessible-legend"]={init};document.querySelectorAll('[data-odd-component="'+"donut-chart-with-accessible-legend"+'"]').forEach(init);
+})();

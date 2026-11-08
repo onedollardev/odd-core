@@ -1,0 +1,16 @@
+{
+  "sku": "ODD-CORE-000036",
+  "name": "Donut Chart with Accessible Legend",
+  "slug": "donut-chart-with-accessible-legend",
+  "category": "charts",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "status": "unreleased-candidate"
+}

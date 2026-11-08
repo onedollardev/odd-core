@@ -1,0 +1,19 @@
+{
+  "name": "Interface Icons",
+  "slug": "interface-icons",
+  "category": "icons",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "license": "MIT",
+  "files": [
+    "index.html",
+    "component.json",
+    "README.md",
+    "LICENSE.txt",
+    "assets",
+    "style.css"
+  ]
+}

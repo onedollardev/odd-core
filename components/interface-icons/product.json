@@ -1,0 +1,16 @@
+{
+  "sku": "ODD-CORE-000025",
+  "name": "Interface Icons",
+  "slug": "interface-icons",
+  "category": "icons",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "svg"
+  ],
+  "status": "unreleased-candidate"
+}

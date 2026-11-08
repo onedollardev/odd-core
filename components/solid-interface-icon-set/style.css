@@ -1,0 +1,183 @@
+/* ODD Style 1.0.0 — tokens are opt-in; no global :root mutation. */
+.odd-scope {
+  --odd-white: #ffffff;
+  --odd-gray-050: #fafafa;
+  --odd-gray-100: #f4f4f4;
+  --odd-gray-200: #e5e5e5;
+  --odd-gray-300: #d4d4d4;
+  --odd-gray-400: #a3a3a3;
+  --odd-gray-500: #737373;
+  --odd-gray-600: #525252;
+  --odd-gray-700: #404040;
+  --odd-gray-800: #262626;
+  --odd-gray-900: #171717;
+  --odd-black: #000000;
+  --odd-blue: #086eea;
+  --odd-text-primary: var(--odd-gray-900);
+  --odd-text-secondary: var(--odd-gray-600);
+  --odd-surface: var(--odd-white);
+  --odd-surface-muted: var(--odd-gray-100);
+  --odd-border-subtle: var(--odd-gray-200);
+  --odd-border-default: var(--odd-gray-300);
+  --odd-border-strong: var(--odd-gray-500);
+  --odd-border-focus: var(--odd-blue);
+  --odd-border-disabled: var(--odd-gray-200);
+  --odd-success: #166534;
+  --odd-warning: #854d0e;
+  --odd-error: #b91c1c;
+  --odd-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --odd-font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --odd-text-xs: .75rem;
+  --odd-text-sm: .875rem;
+  --odd-text-md: 1rem;
+  --odd-text-lg: 1.25rem;
+  --odd-text-xl: 1.5rem;
+  --odd-text-2xl: 2rem;
+  --odd-text-3xl: 3rem;
+  --odd-weight-regular: 400;
+  --odd-weight-medium: 500;
+  --odd-weight-semibold: 600;
+  --odd-line-body: 1.5;
+  --odd-line-heading: 1.15;
+  --odd-tracking-heading: -.025em;
+  --odd-tracking-label: .06em;
+  --odd-space-0: 0;
+  --odd-space-1: .25rem;
+  --odd-space-2: .5rem;
+  --odd-space-3: .75rem;
+  --odd-space-4: 1rem;
+  --odd-space-5: 1.25rem;
+  --odd-space-6: 1.5rem;
+  --odd-space-8: 2rem;
+  --odd-space-12: 3rem;
+  --odd-space-16: 4rem;
+  --odd-radius-none: 0;
+  --odd-radius-sm: 2px;
+  --odd-radius-md: 4px;
+  --odd-radius-lg: 6px;
+  --odd-radius-round: 999px;
+  --odd-border-width: 1px;
+  --odd-shadow-none: none;
+  --odd-shadow-subtle: 0 1px 2px rgb(0 0 0 / .04);
+  --odd-shadow-raised: 0 4px 12px rgb(0 0 0 / .07);
+  --odd-shadow-overlay: 0 12px 32px rgb(0 0 0 / .12);
+  --odd-duration-fast: 120ms;
+  --odd-duration-normal: 180ms;
+  --odd-duration-slow: 240ms;
+  --odd-ease: cubic-bezier(.2, 0, 0, 1);
+  --odd-control-min: 2.75rem;
+  --odd-content-max: 90rem;
+  --odd-module-min: 18rem;
+  --odd-icon-size: 1.25rem;
+}
+.odd-scope[data-odd-theme="dark"] {
+  color-scheme: dark;
+  --odd-text-primary: var(--odd-gray-050);
+  --odd-text-secondary: var(--odd-gray-300);
+  --odd-surface: var(--odd-gray-900);
+  --odd-surface-muted: var(--odd-gray-800);
+  --odd-border-subtle: var(--odd-gray-700);
+  --odd-border-default: var(--odd-gray-600);
+  --odd-border-strong: var(--odd-gray-400);
+  /* Brand blue remains fixed; pale text is used for links on dark surfaces. */
+}
+
+/* Include tokens.css first. Every public selector is ODD-owned. */
+.odd-scope { font-family: var(--odd-font-sans); font-size: var(--odd-text-md); line-height: var(--odd-line-body); color: var(--odd-text-primary); background: var(--odd-surface); }
+.odd-scope :where([class^="odd-"], [class*=" odd-"]) { box-sizing: border-box; }
+.odd-heading { margin: 0; font-weight: var(--odd-weight-semibold); line-height: var(--odd-line-heading); letter-spacing: var(--odd-tracking-heading); }
+.odd-body { margin: 0; }
+.odd-support { color: var(--odd-text-secondary); font-size: var(--odd-text-sm); margin: 0; }
+.odd-label { display: block; font-size: var(--odd-text-sm); font-weight: var(--odd-weight-medium); }
+.odd-code { font-family: var(--odd-font-mono); font-size: var(--odd-text-xs); overflow-wrap: anywhere; }
+.odd-link { color: var(--odd-blue); text-underline-offset: 3px; }
+.odd-scope[data-odd-theme="dark"] .odd-link { color: var(--odd-text-primary); }
+.odd-stack { display: flex; flex-direction: column; gap: var(--odd-space-4); }
+.odd-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--odd-space-3); }
+.odd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,var(--odd-module-min)),1fr)); gap: var(--odd-space-6); }
+.odd-card { min-width: 0; border: var(--odd-border-width) solid var(--odd-border-subtle); border-radius: var(--odd-radius-md); background: var(--odd-surface); }
+.odd-card__header, .odd-card__body, .odd-card__footer { padding: var(--odd-space-6); }
+.odd-card__header { border-bottom: 1px solid var(--odd-border-subtle); }
+.odd-card__footer { border-top: 1px solid var(--odd-border-subtle); }
+.odd-button { --odd-button-bg: var(--odd-surface); display: inline-flex; align-items: center; justify-content: center; gap: var(--odd-space-2); min-height: var(--odd-control-min); padding: var(--odd-space-2) var(--odd-space-4); border: 1px solid var(--odd-border-strong); border-radius: var(--odd-radius-md); font: inherit; font-size: var(--odd-text-sm); font-weight: var(--odd-weight-medium); background: var(--odd-button-bg); color: var(--odd-text-primary); cursor: pointer; transition: background var(--odd-duration-fast) var(--odd-ease), border-color var(--odd-duration-fast) var(--odd-ease); }
+.odd-button:hover:not(:disabled) { background: var(--odd-surface-muted); }
+.odd-button:active:not(:disabled) { border-color: var(--odd-text-primary); }
+.odd-button--primary { --odd-button-bg: var(--odd-blue); color: var(--odd-white); border-color: var(--odd-blue); }
+.odd-button--primary:hover:not(:disabled) { background: var(--odd-blue); box-shadow: inset 0 0 0 999px rgb(0 0 0 / .1); }
+.odd-button--small { padding-inline: var(--odd-space-3); font-size: var(--odd-text-xs); }
+.odd-button--icon { min-width: var(--odd-control-min); padding: var(--odd-space-2); }
+.odd-button[aria-pressed="true"] { border-color: var(--odd-blue); box-shadow: inset 0 -3px var(--odd-blue); }
+.odd-button:disabled, .odd-input:disabled, .odd-select:disabled { color: var(--odd-text-secondary); background: var(--odd-surface-muted); border-color: var(--odd-border-disabled); cursor: not-allowed; }
+.odd-field { display: flex; flex-direction: column; gap: var(--odd-space-2); min-width: 0; }
+.odd-input, .odd-select, .odd-textarea { min-width: 0; width: 100%; min-height: var(--odd-control-min); padding: var(--odd-space-2) var(--odd-space-3); border: 1px solid var(--odd-border-strong); border-radius: var(--odd-radius-md); background: var(--odd-surface); color: var(--odd-text-primary); font: inherit; font-size: var(--odd-text-sm); }
+.odd-input[aria-invalid="true"] { border-color: var(--odd-error); }
+.odd-textarea { resize: vertical; min-height: 6rem; }
+.odd-check { display: flex; align-items: center; gap: var(--odd-space-3); min-height: var(--odd-control-min); font-size: var(--odd-text-sm); cursor: pointer; }
+.odd-checkbox, .odd-radio { width: 1.125rem; height: 1.125rem; margin: 0; accent-color: var(--odd-blue); }
+.odd-switch { display: flex; align-items: center; gap: var(--odd-space-3); min-height: var(--odd-control-min); font-size: var(--odd-text-sm); cursor: pointer; }
+.odd-switch__input { appearance: none; flex: 0 0 auto; width: 2.5rem; height: 1.375rem; margin: 0; padding: 2px; border: 1px solid var(--odd-border-strong); border-radius: var(--odd-radius-round); background: var(--odd-gray-500); cursor: pointer; }
+.odd-switch__input::before { content: ""; display: block; width: 1rem; height: 1rem; border-radius: var(--odd-radius-round); background: var(--odd-white); transition: transform var(--odd-duration-normal) var(--odd-ease); }
+.odd-switch__input:checked { background: var(--odd-blue); border-color: var(--odd-blue); }
+.odd-switch__input:checked::before { transform: translateX(1.125rem); }
+.odd-switch__input:disabled { opacity: .5; cursor: not-allowed; }
+.odd-slider { width: 100%; min-height: var(--odd-control-min); accent-color: var(--odd-blue); margin: 0; }
+.odd-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: var(--odd-space-1); border: 1px solid var(--odd-border-default); border-radius: var(--odd-radius-sm); padding: 2px var(--odd-space-2); font-size: var(--odd-text-xs); color: var(--odd-text-secondary); background: var(--odd-surface); }
+.odd-badge--core { color: var(--odd-blue); border-color: var(--odd-blue); font-weight: var(--odd-weight-semibold); letter-spacing: var(--odd-tracking-label); }
+.odd-badge--success { color: var(--odd-success); }
+.odd-badge--warning { color: var(--odd-warning); }
+.odd-badge--error { color: var(--odd-error); }
+.odd-scope[data-odd-theme="dark"] .odd-badge { color: var(--odd-text-primary); }
+.odd-icon { width: var(--odd-icon-size); height: var(--odd-icon-size); fill: none; stroke: currentColor; stroke-width: 1.5; flex: 0 0 auto; }
+.odd-progress { width: 100%; height: .5rem; border: 0; border-radius: var(--odd-radius-sm); overflow: hidden; accent-color: var(--odd-blue); }
+.odd-progress::-webkit-progress-bar { background: var(--odd-surface-muted); }
+.odd-progress::-webkit-progress-value { background: var(--odd-blue); }
+.odd-progress::-moz-progress-bar { background: var(--odd-blue); }
+.odd-progress--striped::-webkit-progress-value { background: repeating-linear-gradient(45deg,var(--odd-gray-500) 0 6px,var(--odd-gray-300) 6px 12px); }
+.odd-progress--striped::-moz-progress-bar { background: repeating-linear-gradient(45deg,var(--odd-gray-500) 0 6px,var(--odd-gray-300) 6px 12px); }
+.odd-accordion { border: 1px solid var(--odd-border-subtle); border-radius: var(--odd-radius-md); }
+.odd-accordion__trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--odd-space-4); min-height: var(--odd-control-min); padding: var(--odd-space-4); border: 0; background: var(--odd-surface); color: var(--odd-text-primary); font: inherit; text-align: start; cursor: pointer; }
+.odd-accordion__trigger::after { content: "+"; font-size: var(--odd-text-lg); }
+.odd-accordion__trigger[aria-expanded="true"]::after { content: "−"; }
+.odd-accordion__panel { padding: var(--odd-space-4); border-top: 1px solid var(--odd-border-subtle); }
+.odd-disclosure__summary { padding: var(--odd-space-4); cursor: pointer; min-height: var(--odd-control-min); }
+.odd-scope :where(.odd-button,.odd-input,.odd-select,.odd-textarea,.odd-checkbox,.odd-radio,.odd-slider,.odd-switch__input,.odd-link,.odd-accordion__trigger,.odd-disclosure__summary):focus-visible { outline: 2px solid var(--odd-border-focus); outline-offset: 3px; }
+.odd-scope [hidden] { display: none !important; }
+.odd-is-loading { cursor: progress; }
+.odd-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.odd-spinner { width: 1rem; height: 1rem; border: 2px solid currentColor; border-right-color: transparent; border-radius: var(--odd-radius-round); animation: odd-spin .8s linear infinite; }
+@keyframes odd-spin { to { transform: rotate(360deg); } }
+@media(prefers-reduced-motion: reduce) { .odd-scope [class*="odd-"] { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media(forced-colors: active) { .odd-switch__input { appearance: auto; } .odd-switch__input::before { display: none; } .odd-button[aria-pressed="true"] { border: 3px solid Highlight; } }
+
+
+.odd-scope [hidden]{display:none!important}.odd-scope *{box-sizing:border-box}
+.odd-demo{box-sizing:border-box;margin:0;min-height:100vh;padding:16px;background:var(--odd-gray-050);display:grid;place-items:center}
+.odd-demo__canvas{width:min(100%,340px);min-width:0}.odd-root{width:100%;font-size:14px;line-height:1.5}
+.odd-root button,.odd-root input,.odd-root select,.odd-root textarea{font:inherit}.odd-root button{touch-action:manipulation}
+.odd-root :focus-visible{outline:2px solid var(--odd-blue);outline-offset:3px}
+.odd-root fieldset{border:0;padding:0;margin:0;min-width:0}.odd-root legend{font-weight:600;margin-bottom:8px}
+.odd-root label{cursor:pointer}.odd-root input[type=checkbox],.odd-root input[type=radio],.odd-root input[type=range]{accent-color:var(--odd-blue)}
+.odd-root input[type=range]{width:100%;min-width:0}.odd-root p{margin:0}.odd-root h2,.odd-root h3{margin:0;font-size:16px}
+.odd-v{display:flex;flex-direction:column;gap:10px;min-width:0}.odd-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.odd-muted{color:var(--odd-text-secondary);font-size:13px}.odd-box{border:1px solid var(--odd-border-default);background:var(--odd-surface);padding:14px;border-radius:4px;min-width:0}
+.odd-control{min-height:44px;border:1px solid var(--odd-border-strong);border-radius:4px;background:var(--odd-surface);color:var(--odd-text-primary);padding:8px 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:500;text-decoration:none}
+.odd-control:hover{background:var(--odd-gray-100)}.odd-control:disabled{opacity:.45;cursor:not-allowed}.odd-control[aria-pressed=true]{border-color:var(--odd-blue)}
+.odd-primary{background:var(--odd-blue);color:white;border-color:var(--odd-blue)}.odd-primary:hover{background:var(--odd-blue)}
+.odd-input{display:block;width:100%;min-width:0;min-height:44px;padding:9px 10px;border:1px solid var(--odd-border-strong);border-radius:4px;background:var(--odd-surface);color:var(--odd-text-primary)}
+.odd-input[aria-invalid=true]{border-color:var(--odd-text-primary)}.odd-label{display:flex;flex-direction:column;gap:5px;min-width:0}
+.odd-choice{display:flex;align-items:center;gap:8px;min-height:44px}.odd-link{color:var(--odd-blue);text-decoration:underline;text-underline-offset:3px}
+.odd-status{min-height:1.5em;font-size:13px;color:var(--odd-text-secondary)}.odd-icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none}
+.odd-pop{background:var(--odd-surface);border:1px solid var(--odd-border-default);border-radius:4px;padding:10px;box-shadow:var(--odd-shadow-raised);margin-top:8px;max-height:200px;overflow:auto}
+.odd-menu{list-style:none;padding:4px;margin:8px 0 0}.odd-menu button{width:100%;justify-content:flex-start;border:0}.odd-menu button:focus{background:var(--odd-gray-100)}
+.odd-avatar{display:inline-grid;place-items:center;width:48px;height:48px;flex:none;border-radius:50%;background:var(--odd-gray-200);color:var(--odd-text-primary);overflow:hidden;font-weight:600;border:2px solid var(--odd-surface)}
+.odd-avatar img{width:100%;height:100%;object-fit:cover}.odd-avatar--square{border-radius:4px}.odd-avatar--small{width:36px;height:36px;font-size:12px}
+.odd-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){.odd-root *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.odd-solid-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.odd-solid-grid span{display:grid;place-items:center;min-height:44px}.odd-solid-grid svg{width:24px;height:24px;fill:currentColor}
+.odd-root[data-odd-component=dual-range-slider] .odd-label:has(input[type=range]){flex-direction:row;align-items:center;gap:8px}.odd-root[data-odd-component=dual-range-slider] .odd-label:has(input[type=range])>span{width:72px;flex:none;font-size:11px}.odd-status:empty{display:none}.odd-image img{max-height:calc(100vh - 64px)}.odd-pop{max-height:min(200px,calc(100vh - 120px))}
+@media(max-height:250px){.odd-root{font-size:12px}.odd-root .odd-v{gap:4px}.odd-root .odd-choice{min-height:28px}.odd-root .odd-control{min-height:30px;padding:4px 7px}.odd-root .odd-input{min-height:30px;padding:5px 8px}.odd-root .odd-calendar{font-size:10px}.odd-root .odd-calendar .odd-day{min-height:18px;padding:0}.odd-root .odd-calendar th{padding:0}.odd-root .odd-calendar .odd-status{font-size:10px}.odd-root textarea.odd-input{height:50px;min-height:50px}.odd-root .odd-prose{font-size:11px}.odd-root .odd-prose h2{font-size:16px}.odd-root .odd-muted{font-size:11px}}
+
+@media(max-height:300px){.odd-demo{padding:12px}.odd-root{font-size:13px}.odd-root .odd-v{gap:6px}.odd-root .odd-choice{min-height:32px}.odd-root .odd-control,.odd-root .odd-input{min-height:36px;padding:6px 9px}.odd-root input[type=range]{height:20px;min-height:20px;margin:0}.odd-root textarea{min-height:64px}.odd-root .odd-day{min-height:23px}.odd-root .odd-prose{font-size:12px}.odd-root .odd-chart svg{width:100px;height:100px}.odd-root legend{margin-bottom:4px}}
+
+@media(max-height:250px){.odd-root .odd-v{gap:4px}.odd-root .odd-choice{min-height:28px}.odd-root .odd-control{min-height:30px;padding:4px 7px}.odd-root .odd-input{min-height:30px;padding:5px 8px}.odd-root .odd-calendar .odd-day{min-height:18px;padding:0}.odd-root textarea.odd-input{height:50px;min-height:50px}.odd-root .odd-prose{font-size:11px}}
