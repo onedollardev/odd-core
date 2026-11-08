@@ -1,6 +1,6 @@
 /*
  * ONE DOLLAR DEV — CORE STYLES
- * Version: 1.0.1
+ * Version: 1.1.0
  *
  * TABLE OF CONTENTS
  * 01. Document Defaults
@@ -15,6 +15,7 @@
  * 10. Backgrounds & Effects
  * 11. Accessibility
  * 12. Existing Storefront Styles
+ * 13. Component Patterns — tabs, accordion, dialog, menus, steps, layout, prose
  *
  * Load this file before component-specific styles.
  * Values are hard-coded; no CSS custom properties are used.
@@ -908,3 +909,156 @@ button#product-cart-card {
     background-color: rgb(255 255 255 / 15%);
     pointer-events: none;
 }
+
+
+/* ==========================================================
+   13. COMPONENT PATTERNS (added in 1.1.0)
+   Additive only: no rule in sections 01-12 was changed.
+   Promoted from the scoped styles.css of the Core components.
+   ========================================================== */
+
+/* accordion-group-with-exclusive-expansion */
+.oddAccordionGroup{border:1px solid #e5e5ec;border-radius:4px;background:#ffffff}
+.oddAccordionGroup section+section{border-top:1px solid #e5e5ec}
+.oddAccordionGroup h3{margin:0;font-size:inherit}
+.oddAccordionTrigger{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;min-height:2.75rem;padding:0.5rem 1rem;border:0;border-radius:4px;background:transparent;color:#111122;font:inherit;font-size:0.875rem;font-weight:500;text-align:start;cursor:pointer}
+.oddAccordionTrigger:hover{background:#f7f8fc}
+.oddAccordionTrigger::after{content:"+";font-size:1.125rem}
+.oddAccordionTrigger[aria-expanded="true"]::after{content:"\2212"}
+.oddAccordionTrigger:focus-visible{outline:2px solid #086eea;outline-offset:-2px}
+.oddAccordionPanel{padding:1rem;border-top:1px solid #e5e5ec;font-size:0.875rem}
+.oddAccordionPanel[hidden]{display:none}
+
+/* accordion */
+.oddAccordion{border:1px solid #e5e5ec;border-radius:4px;background:#ffffff}
+
+/* breadcrumb-navigation */
+.oddBreadcrumb{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0;padding:0;list-style:none;font-size:0.875rem}
+.oddBreadcrumb li+li::before{content:"/";margin-inline-end:0.5rem;color:#646473}
+.oddBreadcrumb a{color:#086eea;text-underline-offset:3px}
+.oddBreadcrumb a:focus-visible{outline:2px solid #086eea;outline-offset:3px}
+.oddBreadcrumb [aria-current="page"]{color:#111122;font-weight:500}
+
+/* collapsible-sidebar-navigation */
+.oddSidebarShell{display:flex;min-height:11rem;border:1px solid #e5e5ec;border-radius:4px;background:#ffffff}
+.oddSidebarShell aside{padding:0.375rem;border-inline-end:1px solid #e5e5ec}
+.oddSidebarShell nav{display:flex;flex-direction:column;gap:0.25rem;margin-top:0.5rem}
+.oddSidebarShell nav a{display:flex;gap:0.5rem;min-height:2.5rem;padding:0.5rem;border-radius:4px;color:inherit;font-size:0.75rem;text-decoration:none}
+.oddSidebarShell nav a:hover{background:#f7f8fc}
+.oddSidebarShell nav a:focus-visible{outline:2px solid #086eea;outline-offset:2px}
+.oddSidebarShell [aria-current="page"]{color:#086eea;background:#eef5ff}
+.oddSidebarContent{flex:1;min-width:0;padding:0.875rem}
+.oddHeading{margin:0;font-size:1rem;font-weight:600;line-height:1.3}
+@media(max-width:270px){[data-odd-component="collapsible-sidebar-navigation"][data-odd-compact="true"] .oddSidebarShell nav{display:none}.oddSidebarContent{padding:0.625rem}}
+
+/* confirmation-dialog-with-cancel-and-confirm */
+.oddDialog{width:min(20rem,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;padding:1.5rem;border:1px solid #e5e5ec;border-radius:4px;background:#ffffff;color:#111122;box-shadow:0 4px 12px rgb(52 54 78 / 10%)}
+.oddDialog::backdrop{background:rgb(0 0 0 / 18%)}
+.oddHeading{margin:0;font-size:1.25rem;font-weight:600;line-height:1.3}
+
+/* divider */
+.oddDividerDemo{width:20rem;max-width:100%}.oddDivider{width:100%;margin:0;border:0;border-top:1px solid #e5e5ec}
+
+/* dropdown-action-menu */
+.oddMenu{display:flex;flex-direction:column;gap:0.125rem;width:11rem;max-width:100%;padding:0.375rem}
+.oddMenu[hidden]{display:none}
+.oddMenu .oddButton{width:100%;justify-content:flex-start;border-color:transparent;box-shadow:none}
+.oddMenu .oddButton:focus{background-color:#eef5ff}
+
+/* help-popover-with-interactive-content */
+.oddPopover{display:flex;flex-direction:column;gap:0.75rem;max-width:20rem}
+.oddPopover[hidden]{display:none}
+.oddLink{width:fit-content;color:#086eea;text-decoration:underline;text-underline-offset:3px}
+.oddLink:focus-visible{outline:2px solid #086eea;outline-offset:3px}
+
+/* labeled-section-divider */
+.oddLabeledDivider{display:flex;align-items:center;gap:0.75rem;color:#646473}
+.oddLabeledDivider::before,.oddLabeledDivider::after{content:"";flex:1;border-top:1px solid #e5e5ec}
+.oddLabeledDivider span{overflow-wrap:anywhere}
+
+/* pagination-with-page-controls */
+.oddButton.oddPage{min-width:2.5rem;padding-inline:0.5rem}
+.oddButton.oddPage[aria-current="page"]{color:#ffffff;background-color:#086eea;border-color:#006bd6}
+
+/* progress */
+.oddProgress{width:100%;height:0.5rem;border:0;border-radius:4px;overflow:hidden;accent-color:#086eea}
+.oddProgress::-webkit-progress-bar{background:#e5e5ec}
+.oddProgress::-webkit-progress-value{background:#086eea}
+.oddProgress::-moz-progress-bar{background:#086eea}
+
+/* prose-typography-block */
+.oddProse{max-width:65ch;overflow-wrap:anywhere;font-size:0.875rem;line-height:1.6}
+.oddProse h2{margin:0 0 0.6em;font-size:1.25rem;font-weight:600;line-height:1.25}
+.oddProse p,.oddProse ul,.oddProse blockquote{margin:0 0 0.8em}
+.oddProse ul{padding-inline-start:1.5em}
+.oddProse blockquote{padding-inline-start:0.75rem;color:#646473;border-inline-start:2px solid #b9b8bd}
+.oddProse code{padding:0.125rem 0.25rem;font-size:0.9em;background:#f4f5fb;border-radius:4px}
+
+/* responsive-app-top-bar */
+.oddAppShell{overflow:hidden;border:1px solid #e5e5ec;border-radius:4px;background:#ffffff}
+.oddAppBar{display:flex;flex-wrap:wrap;align-items:center;gap:0.375rem;padding:0.5rem;border-bottom:1px solid #e5e5ec}
+.oddAppBrand{flex:1;color:inherit;font-size:0.8125rem;font-weight:600;text-decoration:none}
+.oddAppBar .oddButton{min-height:2.25rem;padding:0.375rem}
+.oddAppBar nav{display:flex;flex-basis:100%;order:4;gap:0.75rem;padding:0.375rem}
+.oddAppBar nav[hidden]{display:none}
+.oddAppBar nav a{color:inherit;font-size:0.75rem;text-decoration:none}
+.oddAppBar nav [aria-current]{text-decoration:underline;text-underline-offset:4px}
+.oddAppBody{min-height:7.5rem;padding:1rem}
+.oddAppBody p{margin-top:0.375rem}
+@media(min-width:600px){.oddAppBar [data-odd-action="toggle"]{display:none}.oddAppBar nav[hidden]{display:flex}.oddAppBar nav{order:0;flex-basis:auto}}
+
+/* responsive-css-grid */
+.oddGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.75rem}
+.oddGridCell{padding:1rem;overflow-wrap:anywhere;text-align:center;background:#ffffff;border:1px solid #e5e5ec;border-radius:4px}
+@media(max-width:270px){.oddGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* scrollable-panel-with-styled-native-scrollbar */
+.oddScroll{max-height:11.25rem;overflow:auto;overscroll-behavior:contain;padding:0.875rem;background:#ffffff;border:1px solid #e5e5ec;border-radius:4px;font-size:0.875rem;scrollbar-width:thin;scrollbar-color:#777777 #e5e5e5}
+.oddScroll p{margin:0.875rem 0 0}
+.oddScroll:focus-visible{outline:2px solid #086eea;outline-offset:2px}
+.oddScroll::-webkit-scrollbar{width:12px;height:12px}
+.oddScroll::-webkit-scrollbar-thumb{background:#777777;border:3px solid #e5e5e5;border-radius:6px}
+.oddScroll::-webkit-scrollbar-track{background:#e5e5e5}
+
+/* stack-layout-with-spacing-tokens */
+.oddLayoutStack{display:flex;flex-direction:column;gap:0.75rem;min-width:0}
+.oddLayoutStackHorizontal{flex-direction:row}
+.oddLayoutStack>*{min-width:0;overflow-wrap:anywhere}
+.oddLayoutStackHorizontal>*{flex:1}
+.oddStackSample{padding:0.75rem;font-size:0.75rem;background:#ffffff;border:1px solid #e5e5ec;border-radius:4px}
+
+/* step-progress-indicator */
+.oddSteps{display:flex;justify-content:space-between;gap:0.5rem;margin:0;padding:0;list-style:none}
+.oddSteps li{display:flex;flex:1;flex-direction:column;align-items:center;gap:0.25rem;min-width:0;font-size:0.75rem}
+.oddStepMark{display:grid;place-items:center;width:1.75rem;height:1.75rem;border:1px solid #e5e5ec;border-radius:4px;background:#ffffff}
+.oddSteps [aria-current="step"] .oddStepMark{color:#086eea;border-color:#086eea;font-weight:700}
+.oddSteps [data-odd-state="complete"] .oddStepMark{background:#eef5ff;border-color:#c4dafa}
+@media(max-width:260px){.oddSteps{flex-direction:column}.oddSteps li{flex-direction:row}}
+
+/* surface-panel-with-elevation */
+.oddSurface{padding:1rem;color:#111122;background:#ffffff;border-radius:4px}
+.oddSurfaceOutline{border:1px solid #e5e5ec}
+.oddSurfaceRaised{border:1px solid #e5e5ec;box-shadow:0 2px 8px rgb(52 54 78 / 6%)}
+.oddSurface p{margin:0.25rem 0 0}
+
+/* tabs */
+.oddTabs{width:min(100%,24rem);min-width:0}
+.oddTabList{display:flex;border-bottom:1px solid #e5e5ec}
+.oddTab{flex:1;min-height:2.75rem;padding:0.5rem 0.75rem;font:inherit;font-size:0.875rem;color:#646473;background:transparent;border:0;border-bottom:2px solid transparent;cursor:pointer}
+.oddTab:hover{color:#111122}
+.oddTab[aria-selected="true"]{color:#111122;border-bottom-color:#086eea}
+.oddTab:focus-visible{outline:2px solid #086eea;outline-offset:-3px}
+.oddTabPanel{padding:1rem 0;font-size:0.875rem}
+.oddTabPanel[hidden]{display:none}
+
+/* text-link-with-external-indicator */
+.oddLink:visited{color:#646473}
+.oddErrorSummary .oddLink:visited{color:#b91c1c}
+
+/* vertical-tabs */
+.oddVerticalTabs{display:grid;grid-template-columns:minmax(5rem,1fr) minmax(0,2fr);gap:0.75rem;min-height:9.5rem}
+.oddVerticalTabs [role="tablist"]{display:flex;flex-direction:column;gap:0.25rem}
+.oddVerticalTabs [role="tab"]{justify-content:flex-start;border-color:transparent;box-shadow:none;font-size:0.75rem}
+.oddVerticalTabs [role="tab"][aria-selected="true"]{color:#086eea;background:#eef5ff;border-inline-start:2px solid #086eea}
+.oddTabPanel{padding:0.625rem;font-size:0.8125rem}
+@media(max-width:260px){.oddVerticalTabs{grid-template-columns:1fr}.oddTabPanel{min-height:3rem}}
