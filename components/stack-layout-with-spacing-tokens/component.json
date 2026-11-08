@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 0,
   "source_dir": "_core/layout/stack-layout-with-spacing-tokens/",
   "download": "_core/layout/stack-layout-with-spacing-tokens/releases/stack-layout-with-spacing-tokens-1.0.0.zip",

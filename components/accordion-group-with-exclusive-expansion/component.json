@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 1,
   "source_dir": "_core/layout/accordion-group-with-exclusive-expansion/",
   "download": "_core/layout/accordion-group-with-exclusive-expansion/releases/accordion-group-with-exclusive-expansion-1.0.0.zip",

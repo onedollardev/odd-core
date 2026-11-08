@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 1,
   "source_dir": "_core/forms/form-field-with-helper-and-error-text/",
   "download": "_core/forms/form-field-with-helper-and-error-text/releases/form-field-with-helper-and-error-text-1.0.0.zip",

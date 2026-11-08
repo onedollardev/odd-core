@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 1,
   "source_dir": "_core/forms/dismissible-filter-chips/",
   "download": "_core/forms/dismissible-filter-chips/releases/dismissible-filter-chips-1.0.0.zip",

@@ -18,4 +18,4 @@ Styles use the shared camelCase .odd* classes in odd-core.css with hard-coded va
 Semantic elements, visible keyboard focus, readable labels and reduced-motion support. Modern browsers using CSS custom properties; browser-native controls may differ visually. Chromium interaction/reflow checks are documented at the Core root. Safari, Firefox and screen-reader acceptance remain integration checks; this is not a WCAG certification. The preview is a separate self-contained index.php for marketplace display and is intentionally excluded from the download.
 
 ## License
-See LICENSE.txt. Free use and modification; attribution required when sharing/republishing; resale prohibited. Assets are original ODD work.
+See LICENSE.txt. MIT licensed; see LICENSE.txt. Assets are original ODD work.

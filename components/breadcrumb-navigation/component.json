@@ -9,7 +9,7 @@
   "core": true,
   "price": 0,
   "currency": "usd",
-  "license": "free-attribution-no-resale",
+  "license": "MIT",
   "preview_type": 0,
   "source_dir": "_core/navigation/breadcrumb-navigation/",
   "download": "_core/navigation/breadcrumb-navigation/releases/breadcrumb-navigation-1.0.0.zip",

@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "price": 0,
   "currency": "usd",
-  "license": "See LICENSE.txt",
+  "license": "MIT",
   "languages": [
     "html",
     "css"
