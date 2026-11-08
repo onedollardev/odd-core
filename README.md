@@ -1,9 +1,18 @@
 # ODD Core
 
-Free MIT-licensed building blocks for One Dollar Dev.
+Free building blocks for One Dollar Dev: one shared stylesheet plus 66 HTML/CSS/JS components.
 
-This repository contains shared styles, infrastructure and the first Core migration candidate. The 63 Core component candidates (Button plus the former odd-products quarantine set) are under components/, each loading the shared ../../odd-core.css, using the supplied odd-core.css 1.0.1 (shared styles are now at 1.1.0; see docs/SHARED-STYLES.md). Historical archives remain preserved separately. No component releases are published yet.
+- **Browse:** https://onedollardev.github.io/odd-core/
+- **Shared stylesheet:** `odd-core.css` at the repository root (version 1.1.0; provenance and checksums in [docs/SHARED-STYLES.md](docs/SHARED-STYLES.md)). Load it before any component styles.
+- **Components:** `components/<slug>/`, each with `index.html`, source files, `README.md` and `LICENSE.txt`. Pages load the shared `../../odd-core.css`.
+- **Original 1.0.0 archives:** `archive/original-1.0.0-zips/` (byte-for-byte, for provenance).
 
-Components will live directly beneath `components/<slug>/`, with one authoritative `odd-core.css` at the repository root. See [import requirements](docs/IMPORT-GATE.md). Premium components belong in the private odd-products repository.
+## Licensing
+
+The repository's `LICENSE` is MIT and covers the shared stylesheet and tooling. Most components currently ship a component-level `LICENSE.txt` (the One Dollar Dev Free Core license: use and modify freely, share with attribution, no standalone resale). Each component's own `LICENSE.txt` applies to that component. The final license for the Core set is still under review.
+
+## Status
+
+Components are unreleased candidates; no release packages are published. Premium components belong in the private odd-products repository. See [import requirements](docs/IMPORT-GATE.md).
 
 Default branch: main. Product releases use X.Y.Z; tooling starts at 0.1.0. No production deployment is enabled.
