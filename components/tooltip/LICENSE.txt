@@ -1,0 +1,3 @@
+One Dollar Dev — Free Core component license
+
+You may use and modify this component in personal and commercial projects. You may share or republish the component with attribution to One Dollar Dev (https://onedollardev.com/). You may not resell the component or its source files as a standalone product.

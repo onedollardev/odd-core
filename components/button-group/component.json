@@ -1,0 +1,19 @@
+{
+  "name": "Button Group",
+  "slug": "button-group",
+  "category": "buttons",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "license": "free-attribution-no-resale",
+  "files": [
+    "index.html",
+    "script.js",
+    "component.json",
+    "README.md",
+    "LICENSE.txt",
+    "odd-core.css"
+  ]
+}

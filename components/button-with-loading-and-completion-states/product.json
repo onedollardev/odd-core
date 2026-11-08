@@ -1,0 +1,17 @@
+{
+  "sku": "ODD-CORE-000034",
+  "name": "Button with Loading and Completion States",
+  "slug": "button-with-loading-and-completion-states",
+  "category": "buttons",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}

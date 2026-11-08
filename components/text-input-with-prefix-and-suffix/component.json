@@ -1,0 +1,23 @@
+{
+  "sku": "ODD-CORE-000047",
+  "name": "Text Input with Prefix and Suffix",
+  "slug": "text-input-with-prefix-and-suffix",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/text-input-with-prefix-and-suffix/",
+  "download": "_core/forms/text-input-with-prefix-and-suffix/releases/text-input-with-prefix-and-suffix-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css"
+  ]
+}

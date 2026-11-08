@@ -1,0 +1,16 @@
+{
+  "sku": "ODD-CORE-000016",
+  "name": "Badge",
+  "slug": "badge",
+  "category": "feedback",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}

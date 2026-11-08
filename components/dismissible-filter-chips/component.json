@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000038",
+  "name": "Dismissible Filter Chips",
+  "slug": "dismissible-filter-chips",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/dismissible-filter-chips/",
+  "download": "_core/forms/dismissible-filter-chips/releases/dismissible-filter-chips-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

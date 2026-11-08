@@ -1,0 +1,23 @@
+{
+  "sku": "ODD-CORE-000048",
+  "name": "Keyboard Shortcut Hint",
+  "slug": "keyboard-shortcut-hint",
+  "category": "feedback",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/feedback/keyboard-shortcut-hint/",
+  "download": "_core/feedback/keyboard-shortcut-hint/releases/keyboard-shortcut-hint-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css"
+  ]
+}

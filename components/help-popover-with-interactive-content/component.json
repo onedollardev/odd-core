@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000069",
+  "name": "Help Popover with Interactive Content",
+  "slug": "help-popover-with-interactive-content",
+  "category": "overlays",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/overlays/help-popover-with-interactive-content/",
+  "download": "_core/overlays/help-popover-with-interactive-content/releases/help-popover-with-interactive-content-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

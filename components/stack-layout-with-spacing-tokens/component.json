@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000063",
+  "name": "Stack Layout with Spacing Tokens",
+  "slug": "stack-layout-with-spacing-tokens",
+  "category": "layout",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/layout/stack-layout-with-spacing-tokens/",
+  "download": "_core/layout/stack-layout-with-spacing-tokens/releases/stack-layout-with-spacing-tokens-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000061",
+  "name": "Searchable Single Select",
+  "slug": "searchable-single-select",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/searchable-single-select/",
+  "download": "_core/forms/searchable-single-select/releases/searchable-single-select-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

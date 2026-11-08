@@ -1,0 +1,23 @@
+{
+  "sku": "ODD-CORE-000056",
+  "name": "Radio Choice Cards",
+  "slug": "radio-choice-cards",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/radio-choice-cards/",
+  "download": "_core/forms/radio-choice-cards/releases/radio-choice-cards-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css"
+  ]
+}

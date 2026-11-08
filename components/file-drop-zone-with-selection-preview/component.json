@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000043",
+  "name": "File Drop Zone with Selection Preview",
+  "slug": "file-drop-zone-with-selection-preview",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/file-drop-zone-with-selection-preview/",
+  "download": "_core/forms/file-drop-zone-with-selection-preview/releases/file-drop-zone-with-selection-preview-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}

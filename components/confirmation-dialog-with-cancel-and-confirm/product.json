@@ -1,0 +1,17 @@
+{
+  "sku": "ODD-CORE-000052",
+  "name": "Confirmation Dialog with Cancel and Confirm",
+  "slug": "confirmation-dialog-with-cancel-and-confirm",
+  "category": "overlays",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "shared_stylesheet": "../../odd-core.css",
+  "status": "unreleased-candidate"
+}

@@ -1,0 +1,23 @@
+{
+  "sku": "ODD-CORE-000060",
+  "name": "Segmented Radio Control",
+  "slug": "segmented-radio-control",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/segmented-radio-control/",
+  "download": "_core/forms/segmented-radio-control/releases/segmented-radio-control-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css"
+  ]
+}

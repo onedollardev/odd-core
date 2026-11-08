@@ -1,0 +1,23 @@
+{
+  "sku": "ODD-CORE-000050",
+  "name": "Empty State with Optional Action",
+  "slug": "empty-state-with-optional-action",
+  "category": "feedback",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/feedback/empty-state-with-optional-action/",
+  "download": "_core/feedback/empty-state-with-optional-action/releases/empty-state-with-optional-action-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css"
+  ]
+}

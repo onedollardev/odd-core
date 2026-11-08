@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000071",
+  "name": "Prose Typography Block",
+  "slug": "prose-typography-block",
+  "category": "layout",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "odd-style",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 0,
+  "source_dir": "_core/layout/prose-typography-block/",
+  "download": "_core/layout/prose-typography-block/releases/prose-typography-block-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

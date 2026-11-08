@@ -1,0 +1,24 @@
+{
+  "sku": "ODD-CORE-000042",
+  "name": "Form Field with Helper and Error Text",
+  "slug": "form-field-with-helper-and-error-text",
+  "category": "forms",
+  "version": "1.0.0",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "free-attribution-no-resale",
+  "preview_type": 1,
+  "source_dir": "_core/forms/form-field-with-helper-and-error-text/",
+  "download": "_core/forms/form-field-with-helper-and-error-text/releases/form-field-with-helper-and-error-text-1.0.0.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css"
+  ]
+}
