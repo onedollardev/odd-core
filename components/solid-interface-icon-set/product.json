@@ -1,0 +1,16 @@
+{
+  "sku": "ODD-CORE-000045",
+  "name": "Solid Interface Icon Set",
+  "slug": "solid-interface-icon-set",
+  "category": "icons",
+  "version": "1.0.0",
+  "price": 0,
+  "currency": "usd",
+  "license": "See LICENSE.txt",
+  "languages": [
+    "html",
+    "css",
+    "svg"
+  ],
+  "status": "unreleased-candidate"
+}
