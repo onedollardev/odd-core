@@ -1,7 +1,7 @@
 """Validate and package the Core Button migration candidate. Never deploy."""
 import argparse,datetime,hashlib,json,pathlib,re,zipfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-CSS_SHA='332cb3bbf7c88d3db38e9a1aa46f80a7bc2bbb648a0ddce2d6ed58da9cba292a'
+CSS_SHA='92bd1b1fb8c0dad65b36de0e5bc4234fb983dfa3666700e3484fb64d0f4d0c9d'
 def build(out,ref):
  if not re.fullmatch('[a-f0-9]{40}',ref):raise ValueError('full commit SHA required')
  source=ROOT/'components/button';m=json.loads((source/'product.json').read_text());css=(ROOT/'odd-core.css').read_bytes()
