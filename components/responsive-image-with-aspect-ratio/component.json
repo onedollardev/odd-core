@@ -1,0 +1,26 @@
+{
+  "sku": "ODD-CORE-000046",
+  "name": "Responsive Image with Aspect Ratio",
+  "slug": "responsive-image-with-aspect-ratio",
+  "category": "cards",
+  "version": "1.0.1",
+  "fieldContractVersion": "1.0.0",
+  "participation": "field-aware",
+  "core": true,
+  "price": 0,
+  "currency": "usd",
+  "license": "MIT",
+  "preview_type": 1,
+  "source_dir": "_core/cards/responsive-image-with-aspect-ratio/",
+  "download": "_core/cards/responsive-image-with-aspect-ratio/releases/responsive-image-with-aspect-ratio-1.0.1.zip",
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "assets/landscape.svg",
+    "component.json",
+    "index.html",
+    "script.js",
+    "odd-core.css",
+    "styles.css"
+  ]
+}

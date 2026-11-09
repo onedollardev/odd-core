@@ -14,15 +14,15 @@ PR [#145](https://github.com/onedollardev/odd-products/pull/145) is open on `pla
 
 | Reconciliation | Count |
 |---|---:|
-| Current Core records | 66 |
+| Current Core records | 67 |
 | Core rows in the PR queue | 30 |
-| Current Core SKUs matching a queued SKU | 25 |
+| Current Core SKUs matching a queued SKU | 26 |
 | Current Core SKUs absent from the queue | 41 |
-| Queued Core SKUs with no matching component directory in this worktree | 5 |
+| Queued Core SKUs with no matching component directory in this worktree | 4 |
 
-The PR README's claim that 36 Core records are not inventoried cannot be reproduced from the current SKU-level evidence: 25 of the 30 queue SKUs match current component records, while five queue rows have no component directory here. Consequently, 66 current records minus 25 matches equals 41 unqueued records, not 36. No aliases or substitute SKU mappings were invented.
+The PR README's claim that 36 Core records are not inventoried cannot be reproduced from the current SKU-level evidence: 26 of the 30 queue SKUs match current component records, while four queue rows have no component directory here. Consequently, 67 current records minus 26 matches equals 41 unqueued records, not 36. No aliases or substitute SKU mappings were invented.
 
-**The 25 current Core records already represented in the queue:** `ODD-CORE-000001`–`000018`, `ODD-CORE-000027`, `ODD-CORE-000031`, `ODD-CORE-000033`, `ODD-CORE-000034`, `ODD-CORE-000048`, `ODD-CORE-000050`, and `ODD-CORE-000068`.
+**The 26 current Core records already represented in the queue:** `ODD-CORE-000001`–`000018`, `ODD-CORE-000027`, `ODD-CORE-000031`, `ODD-CORE-000033`, `ODD-CORE-000034`, `ODD-CORE-000046`, `ODD-CORE-000048`, `ODD-CORE-000050`, and `ODD-CORE-000068`.
 
 **Queue rows with no matching component directory in this worktree:**
 
@@ -31,8 +31,9 @@ The PR README's claim that 36 Core records are not inventoried cannot be reprodu
 | `ODD-CORE-000028` | Avatar Group with Overflow Count | Historical queue record; source directory absent |
 | `ODD-CORE-000029` | Profile Identity Row | Historical queue record; source directory absent |
 | `ODD-CORE-000030` | Avatar with Initials Fallback | Historical queue record; source directory absent |
-| `ODD-CORE-000046` | Responsive Image with Aspect Ratio | Source directory absent; current catalog has a same-name/slug paid listing, SKU `ODD-000446`; do not conflate it with this Core SKU |
 | `ODD-CORE-000051` | Native Media Player | Historical queue record; source directory absent |
+
+`ODD-CORE-000046` Responsive Image with Aspect Ratio now has current source in `components/responsive-image-with-aspect-ratio/`, restored from its existing historical Core 1.0.0 source and identified as an unreleased 1.0.1 candidate. The original Core SKU and `source_dir` attribution are retained. The similarly named paid `ODD-000446` remains a separate SKU; no alias, availability, production listing, or `products-live` entry was changed. Current source uses MIT; the historical 1.0.0 license and ZIP are unchanged.
 
 **The 41 current Core records absent from PR #145's queue:**
 
@@ -100,7 +101,7 @@ Additional user-provided evidence is the four-page PDF **“One Dollar Dev _ Web
 | Alert Notification Count Badge | `ODD-CORE-000031` | Possible name match only; exact SKU not shown |
 | Inline Form Error Alert | `ODD-CORE-000027` | Exact title match |
 
-These are storefront title matches, not confirmation of current SKU identity, server files, or downloads. In particular, do not treat the `ODD-CORE-000046` title card as proof that the Core SKU is the paid `ODD-000446` product. The paid-catalog session's read-only scrape of `/results` and its two `/fetch/products.php` pages on 2026-11-09 returned 70 unique product cards and previously matched 29 of 30 historical Core rows by name/slug; that scrape also does not identify which approximately nine live catalog entries lack server files or verify delivery for the rest. The historical queue's `live_snapshot_unverified` labels were not changed in this repository; owner confirmation of the 70-item catalog state is recorded separately from SKU-level and delivery verification.
+These are storefront title matches, not confirmation of current SKU identity, server files, or downloads. In particular, do not treat the `ODD-CORE-000046` title card as proof that the Core SKU is the paid `ODD-000446` product. The paid-catalog session's read-only scrape of `/results` and its two `/fetch/products.php` pages on 2026-11-09 returned 70 unique product cards and previously matched 29 of 30 historical Core rows by name/slug; restoring current Core source does not resolve that storefront identity conflict or identify which approximately nine live catalog entries lack server files, or verify delivery for the rest. The historical queue's `live_snapshot_unverified` labels were not changed in this repository; owner confirmation of the 70-item catalog state is recorded separately from SKU-level and delivery verification.
 
 For the provisional 100-item catalog target, the paid-catalog session is selecting 20 paid additions. This work recommends the ten Core candidates below, yielding a provisional 30 additions to the 70 owner-confirmed catalog-live entries. The arithmetic describes catalog selection only; it does not mean the existing 70 are all downloadable or that the new candidates are live. Identify the approximately nine products missing server files and verify delivery for each catalog entry before claiming release readiness. Do not change availability or combine Core `000046` with paid `000446`.
 
@@ -156,4 +157,10 @@ No Firefox, Safari, screen-reader, reduced-motion preference emulation, real fil
 
 ## Current license verification
 
-The current-source licensing audit covered all 66 `components/*/product.json` records: each declares MIT, all 66 component `LICENSE.txt` files byte-match the root MIT `LICENSE`, and all 65 present `component.json` manifests declare MIT. `scripts/check_licenses.py` now enforces these checks and runs in the candidate workflow. The Button-only candidate package build was also run locally; its ZIP includes the root MIT notice and `product.json` declares MIT. This applies to current sources and future packages only; historical release ZIPs and sold archives were not available here and must retain their original terms.
+The current-source licensing audit covered all 67 `components/*/product.json` records: each declares MIT, all 67 component `LICENSE.txt` files byte-match the root MIT `LICENSE`, and all 66 present `component.json` manifests declare MIT. `scripts/check_licenses.py` now enforces these checks and runs in the candidate workflow. The Button-only candidate package build was also run locally; its ZIP includes the root MIT notice and `product.json` declares MIT. The restored Responsive Image candidate's local source package was separately checked to contain its MIT license and manifests. This applies to current sources and future packages only; historical release ZIPs and sold archives retain their original terms.
+
+## ODD-CORE-000046 source restore evidence
+
+`components/responsive-image-with-aspect-ratio/` was restored from the original Core 1.0.0 source in `odd-products` (`products-live/.../releases/responsive-image-with-aspect-ratio-1.0.0/`), read-only. The demo SVG is byte-identical to the original apart from a trailing newline. Current source is an unreleased MIT 1.0.1 candidate; the historical 1.0.0 source, ZIP, preview, and "ODD Core Free License" were not modified or copied into this repository. The paid `ODD-000446` listing is a distinct SKU and was not aliased.
+
+Chromium-class browser-canvas checks: 4:3 → 1:1 → 16:9 changed the frame ratio (1.333/1/1.778); Contain changed object-fit; reset restored 4:3/cover; `odd:change` events and status text fired; initialization is idempotent; a missing image switched to the labeled fallback without retry; no horizontal overflow at 240px, 360px and 1280px. Not tested: real keyboard arrow navigation (native radio behavior only), Firefox/Safari, screen readers, multiple-instance mounting, `srcset` examples, release ZIP, preview/index.php, delivery.
