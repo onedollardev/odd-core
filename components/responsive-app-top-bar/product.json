@@ -13,5 +13,19 @@
     "javascript"
   ],
   "shared_stylesheet": "../../odd-core.css",
-  "status": "unreleased-candidate"
+  "status": "unreleased-candidate",
+  "stripe": {
+    "product_id": "prod_VbCFEf8IcCQWBU",
+    "price_id": "price_1UZzrAB3qzAIVu76GyNJSnTE",
+    "mode": "live",
+    "unit_amount": 0,
+    "currency": "usd",
+    "type": "one_time",
+    "tax_behavior": "unspecified",
+    "unit_label": "component",
+    "product_type": "core_component",
+    "license_type": "free"
+  },
+  "download": "core/navigation/responsive-app-top-bar/releases/responsive-app-top-bar-1.0.0.zip",
+  "source_dir": "core/navigation/responsive-app-top-bar/"
 }

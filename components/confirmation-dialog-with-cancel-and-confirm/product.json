@@ -13,5 +13,19 @@
     "javascript"
   ],
   "shared_stylesheet": "../../odd-core.css",
-  "status": "unreleased-candidate"
+  "status": "unreleased-candidate",
+  "stripe": {
+    "product_id": "prod_VbCFKAb2Zgeo0m",
+    "price_id": "price_1UZzrAB3qzAIVu76EeceeCJe",
+    "mode": "live",
+    "unit_amount": 0,
+    "currency": "usd",
+    "type": "one_time",
+    "tax_behavior": "unspecified",
+    "unit_label": "component",
+    "product_type": "core_component",
+    "license_type": "free"
+  },
+  "download": "core/overlays/confirmation-dialog-with-cancel-and-confirm/releases/confirmation-dialog-with-cancel-and-confirm-1.0.0.zip",
+  "source_dir": "core/overlays/confirmation-dialog-with-cancel-and-confirm/"
 }

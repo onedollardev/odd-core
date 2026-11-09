@@ -13,5 +13,19 @@
     "javascript"
   ],
   "shared_stylesheet": "../../odd-core.css",
-  "status": "unreleased-candidate"
+  "status": "unreleased-candidate",
+  "stripe": {
+    "product_id": "prod_VbCFZhRrMf7pOi",
+    "price_id": "price_1UZzr9B3qzAIVu760NGPpmKF",
+    "mode": "live",
+    "unit_amount": 0,
+    "currency": "usd",
+    "type": "one_time",
+    "tax_behavior": "unspecified",
+    "unit_label": "component",
+    "product_type": "core_component",
+    "license_type": "free"
+  },
+  "download": "core/forms/multi-select-with-removable-choices/releases/multi-select-with-removable-choices-1.0.0.zip",
+  "source_dir": "core/forms/multi-select-with-removable-choices/"
 }
