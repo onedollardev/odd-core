@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check current Core licenses and metadata
+        run: python scripts/check_licenses.py
       - name: Validate metadata, shared styles and build candidate
         env:
           BUILD_REF: ${{ github.sha }}
