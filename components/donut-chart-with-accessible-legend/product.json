@@ -12,5 +12,19 @@
     "css",
     "javascript"
   ],
-  "status": "unreleased-candidate"
+  "status": "unreleased-candidate",
+  "stripe": {
+    "product_id": "prod_VbCFyfz2toys4n",
+    "price_id": "price_1UZzr8B3qzAIVu760rnauNOg",
+    "mode": "live",
+    "unit_amount": 0,
+    "currency": "usd",
+    "type": "one_time",
+    "tax_behavior": "unspecified",
+    "unit_label": "component",
+    "product_type": "core_component",
+    "license_type": "free"
+  },
+  "download": "core/charts/donut-chart-with-accessible-legend/releases/donut-chart-with-accessible-legend-1.0.0.zip",
+  "source_dir": "core/charts/donut-chart-with-accessible-legend/"
 }
