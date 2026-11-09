@@ -86,7 +86,21 @@ The five queue-only records are not treated as missing current source candidates
 
 **Owner-confirmed storefront/catalog status:** 70 products are live in the current catalog. The owner reports that about nine products do not have files on the server, but their exact identities have not been verified. Do not attribute this gap to specific SKUs based only on the current evidence. Server file availability and delivery for the other catalog entries are also unverified; do not infer that the remaining 61 are deliverable.
 
-The paid-catalog session's read-only scrape of the production `/results` page and its two `/fetch/products.php` pages on 2026-11-09 also returned 70 unique product cards. It matched 29 of the 30 historical Core rows by name/slug; `ODD-CORE-000046` is ambiguous because the same listing appears under paid SKU `ODD-000446`. This scrape supports current listing presence but does not establish a one-to-one SKU identity for every card, identify which approximately nine lack files, or verify file delivery for the others. The historical queue's `live_snapshot_unverified` labels were not changed in this repository; owner confirmation of the 70-item catalog state is recorded separately from the release-queue snapshot and does not resolve the Core-46/paid-446 identity conflict.
+Additional user-provided evidence is the four-page PDF **“One Dollar Dev _ Web Development Components for $1.pdf”**, identified by the owner as the live site. Its first page shows the storefront title and “70 products”; page four shows “24 of 70 components loaded” and “Load more”. Thus the PDF supports the 70-item storefront listing count and shows at least 24 product cards rendered, not that all 70 cards were individually inspected. Card titles visible in the supplied evidence allow the following name-level reconciliation:
+
+| Visible card title in supplied PDF | Core SKU/name match | Evidence status |
+|---|---|---|
+| Avatar Group with Overflow Count | `ODD-CORE-000028` | Exact title match; current catalog SKU is not shown |
+| Profile Identity Row | `ODD-CORE-000029` | Exact title match; current catalog SKU is not shown |
+| Avatar with Initials Fallback | `ODD-CORE-000030` | Exact title match; current catalog SKU is not shown |
+| Responsive Image with Aspect Ratio | `ODD-CORE-000046` | Title match only; identity remains ambiguous because the read-only scrape reports a same-name/slug paid listing as `ODD-000446` |
+| Native Media Player | `ODD-CORE-000051` | Exact title match; current catalog SKU is not shown |
+| Empty State with Optional Action | `ODD-CORE-000050` | Exact title match |
+| Keyboard Shortcut Hint Tooltip | `ODD-CORE-000048` | Name is included in visible title; exact SKU not shown |
+| Alert Notification Count Badge | `ODD-CORE-000031` | Possible name match only; exact SKU not shown |
+| Inline Form Error Alert | `ODD-CORE-000027` | Exact title match |
+
+These are storefront title matches, not confirmation of current SKU identity, server files, or downloads. In particular, do not treat the `ODD-CORE-000046` title card as proof that the Core SKU is the paid `ODD-000446` product. The paid-catalog session's read-only scrape of `/results` and its two `/fetch/products.php` pages on 2026-11-09 returned 70 unique product cards and previously matched 29 of 30 historical Core rows by name/slug; that scrape also does not identify which approximately nine live catalog entries lack server files or verify delivery for the rest. The historical queue's `live_snapshot_unverified` labels were not changed in this repository; owner confirmation of the 70-item catalog state is recorded separately from SKU-level and delivery verification.
 
 For the provisional 100-item catalog target, the paid-catalog session is selecting 20 paid additions. This work recommends the ten Core candidates below, yielding a provisional 30 additions to the 70 owner-confirmed catalog-live entries. The arithmetic describes catalog selection only; it does not mean the existing 70 are all downloadable or that the new candidates are live. Identify the approximately nine products missing server files and verify delivery for each catalog entry before claiming release readiness. Do not change availability or combine Core `000046` with paid `000446`.
 
