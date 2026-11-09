@@ -13,5 +13,19 @@
     "javascript"
   ],
   "shared_stylesheet": "../../odd-core.css",
-  "status": "unreleased-candidate"
+  "status": "unreleased-candidate",
+  "stripe": {
+    "product_id": "prod_VbCFjBuYdbvVdi",
+    "price_id": "price_1UZzr8B3qzAIVu76dnmAuKfT",
+    "mode": "live",
+    "unit_amount": 0,
+    "currency": "usd",
+    "type": "one_time",
+    "tax_behavior": "unspecified",
+    "unit_label": "component",
+    "product_type": "core_component",
+    "license_type": "free"
+  },
+  "download": "core/forms/file-drop-zone-with-selection-preview/releases/file-drop-zone-with-selection-preview-1.0.0.zip",
+  "source_dir": "core/forms/file-drop-zone-with-selection-preview/"
 }
