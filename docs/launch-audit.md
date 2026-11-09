@@ -153,3 +153,7 @@ The other 30 current unqueued Core records not in the ten-item slate remain back
 Work ID `CORE-LAUNCH-WAVE-1-QA` reserves the ten recommendation SKUs above to the owner/session shown at the top of this document. The sidebar (`000062`) was also checked and held with its finding recorded. Another agent should select different products or first coordinate before repeating these checks.
 
 No Firefox, Safari, screen-reader, reduced-motion preference emulation, real file picker, release ZIP, download/checkout, or production-write test was performed. No product code or product availability was changed. Existing source attribution and licenses were retained. No historical archive or sold ZIP was present in the worktree or modified.
+
+## Current license verification
+
+The current-source licensing audit covered all 66 `components/*/product.json` records: each declares MIT, all 66 component `LICENSE.txt` files byte-match the root MIT `LICENSE`, and all 65 present `component.json` manifests declare MIT. `scripts/check_licenses.py` now enforces these checks and runs in the candidate workflow. The Button-only candidate package build was also run locally; its ZIP includes the root MIT notice and `product.json` declares MIT. This applies to current sources and future packages only; historical release ZIPs and sold archives were not available here and must retain their original terms.
