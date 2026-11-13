@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/charts/donut-chart-with-accessible-legend/",
-  "download": "_core/charts/donut-chart-with-accessible-legend/releases/donut-chart-with-accessible-legend-1.0.0.zip",
+  "source_dir": "core/charts/donut-chart-with-accessible-legend/",
+  "download": "core/charts/donut-chart-with-accessible-legend/releases/donut-chart-with-accessible-legend-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

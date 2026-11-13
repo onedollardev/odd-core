@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/forms/searchable-single-select/",
-  "download": "_core/forms/searchable-single-select/releases/searchable-single-select-1.0.0.zip",
+  "source_dir": "core/forms/searchable-single-select/",
+  "download": "core/forms/searchable-single-select/releases/searchable-single-select-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

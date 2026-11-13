@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/navigation/responsive-app-top-bar/",
-  "download": "_core/navigation/responsive-app-top-bar/releases/responsive-app-top-bar-1.0.0.zip",
+  "source_dir": "core/navigation/responsive-app-top-bar/",
+  "download": "core/navigation/responsive-app-top-bar/releases/responsive-app-top-bar-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

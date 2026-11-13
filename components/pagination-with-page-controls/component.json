@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/navigation/pagination-with-page-controls/",
-  "download": "_core/navigation/pagination-with-page-controls/releases/pagination-with-page-controls-1.0.0.zip",
+  "source_dir": "core/navigation/pagination-with-page-controls/",
+  "download": "core/navigation/pagination-with-page-controls/releases/pagination-with-page-controls-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/forms/calendar-date-picker/",
-  "download": "_core/forms/calendar-date-picker/releases/calendar-date-picker-1.0.0.zip",
+  "source_dir": "core/forms/calendar-date-picker/",
+  "download": "core/forms/calendar-date-picker/releases/calendar-date-picker-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

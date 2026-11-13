@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/navigation/vertical-tabs/",
-  "download": "_core/navigation/vertical-tabs/releases/vertical-tabs-1.0.0.zip",
+  "source_dir": "core/navigation/vertical-tabs/",
+  "download": "core/navigation/vertical-tabs/releases/vertical-tabs-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

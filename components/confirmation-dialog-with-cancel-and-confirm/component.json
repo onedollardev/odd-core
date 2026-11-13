@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/overlays/confirmation-dialog-with-cancel-and-confirm/",
-  "download": "_core/overlays/confirmation-dialog-with-cancel-and-confirm/releases/confirmation-dialog-with-cancel-and-confirm-1.0.0.zip",
+  "source_dir": "core/overlays/confirmation-dialog-with-cancel-and-confirm/",
+  "download": "core/overlays/confirmation-dialog-with-cancel-and-confirm/releases/confirmation-dialog-with-cancel-and-confirm-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",
