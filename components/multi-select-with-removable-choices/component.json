@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/forms/multi-select-with-removable-choices/",
-  "download": "_core/forms/multi-select-with-removable-choices/releases/multi-select-with-removable-choices-1.0.0.zip",
+  "source_dir": "core/forms/multi-select-with-removable-choices/",
+  "download": "core/forms/multi-select-with-removable-choices/releases/multi-select-with-removable-choices-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",

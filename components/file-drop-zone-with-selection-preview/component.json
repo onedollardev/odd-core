@@ -11,8 +11,8 @@
   "currency": "usd",
   "license": "MIT",
   "preview_type": 1,
-  "source_dir": "_core/forms/file-drop-zone-with-selection-preview/",
-  "download": "_core/forms/file-drop-zone-with-selection-preview/releases/file-drop-zone-with-selection-preview-1.0.0.zip",
+  "source_dir": "core/forms/file-drop-zone-with-selection-preview/",
+  "download": "core/forms/file-drop-zone-with-selection-preview/releases/file-drop-zone-with-selection-preview-1.0.0.zip",
   "files": [
     "LICENSE.txt",
     "README.md",
